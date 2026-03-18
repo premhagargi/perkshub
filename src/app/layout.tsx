@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'PartnerPath AI | Premium Partnership Discovery',
@@ -23,6 +24,7 @@ export default function RootLayout({
         <div className="relative min-h-screen overflow-hidden">
           <Navbar />
           <main className="relative z-10">{children}</main>
+          <Footer />
         </div>
       </body>
     </html>

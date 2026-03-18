@@ -21,9 +21,6 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 
 export default function Home() {
-  const notionLogo = PlaceHolderImages.find(img => img.id === 'notion-mock');
-  const perplexityLogo = PlaceHolderImages.find(img => img.id === 'perplexity-mock');
-
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -237,40 +234,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Proof Section */}
-      <section className="py-20 px-6 bg-[#f9f9f9] border-y border-[#eeeeee]">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">A proven playbook used by the best</h2>
-            <p className="text-lg text-[#6b6b6b]">Top SaaS and Creators already offer perks through partner ecosystems.</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
-            <Card className="border-[#eeeeee] rounded-3xl overflow-hidden bg-white">
-              <div className="p-8">
-                <div className="h-10 w-28 relative mb-4">
-                  {perplexityLogo && <Image src={perplexityLogo.imageUrl} alt="Perplexity" fill className="object-contain" />}
-                </div>
-                <h3 className="text-xl font-bold mb-2">Perplexity</h3>
-                <p className="text-sm text-[#6b6b6b]">Perplexity offers 1-year Pro access to subscribers of Lenny's Newsletter, Airtel and more.</p>
-              </div>
-            </Card>
-            <Card className="border-[#eeeeee] rounded-3xl overflow-hidden bg-white">
-              <div className="p-8">
-                <div className="h-10 w-28 relative mb-4">
-                  {notionLogo && <Image src={notionLogo.imageUrl} alt="Notion" fill className="object-contain" />}
-                </div>
-                <h3 className="text-xl font-bold mb-2">Notion</h3>
-                <p className="text-sm text-[#6b6b6b]">Notion offers exclusive credits and perks to communities, accelerators, and products.</p>
-              </div>
-            </Card>
-          </div>
-          <p className="text-center text-[10px] font-bold uppercase tracking-[0.2em] text-[#6b6b6b]">
-            Many more prominent brands offering partner perks
-          </p>
         </div>
       </section>
 

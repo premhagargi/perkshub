@@ -115,7 +115,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Acquire high-intent users through Partner Perks</h2>
             <p className="text-lg text-[#6b6b6b] max-w-2xl mx-auto">
-              Top SaaS and Creators already offer perks through partner ecosystems to reach high-intent users and drive adoption.
+              Join partner perks programs of complementary products - reach the right audience, offer exclusive deals that drive conversion, and build a scalable acquisition channel.
             </p>
           </div>
 

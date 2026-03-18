@@ -2,7 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { 
-  ArrowRight, 
   CheckCircle2, 
   AlertCircle, 
   TrendingUp, 
@@ -13,7 +12,8 @@ import {
   Zap,
   Star,
   Gift,
-  Rocket
+  Rocket,
+  ArrowRight
 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
@@ -73,7 +73,7 @@ export default function Home() {
             </div>
             
             <div className="flex justify-start opacity-0 animate-blur-in delay-400">
-              <Button asChild className="pill-button bg-[#111111] text-white h-[48px] text-base px-14 group shadow-xl shadow-black/5 hover:shadow-black/10 transition-all duration-300">
+              <Button asChild className="pill-button bg-[#111111] text-white h-[48px] text-base px-10 group shadow-xl shadow-black/5 hover:shadow-black/10 transition-all duration-300">
                 <Link href="/discover">
                   Get started 
                   <svg className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">

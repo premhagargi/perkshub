@@ -57,7 +57,7 @@ export default function Navbar() {
 
           <div className="flex items-center gap-3">
             <Link href="/login" className="text-sm font-medium text-[#6b6b6b] hover:text-[#111111] transition-colors px-2 hidden sm:block">Log in</Link>
-            <Button asChild className="pill-button bg-[#111111] text-white hover:bg-[#111111]/90 h-[36px] md:h-[40px] px-4 md:px-5 text-xs md:text-sm">
+            <Button asChild className="pill-button bg-[#111111] text-white hover:bg-[#111111]/90 h-[36px] md:h-[40px] px-3 md:px-4 text-xs md:text-sm">
               <Link href="/discover">Get Started</Link>
             </Button>
           </div>

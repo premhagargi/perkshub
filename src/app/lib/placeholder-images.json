@@ -1,3 +1,4 @@
+
 {
   "placeholderImages": [
     {
@@ -17,6 +18,18 @@
       "description": "Analytics Dashboard Preview",
       "imageUrl": "https://picsum.photos/seed/dash1/1200/800",
       "imageHint": "dashboard chart"
+    },
+    {
+      "id": "perplexity-mock",
+      "description": "Perplexity Logo Placeholder",
+      "imageUrl": "https://picsum.photos/seed/px1/400/200",
+      "imageHint": "company logo"
+    },
+    {
+      "id": "notion-mock",
+      "description": "Notion Logo Placeholder",
+      "imageUrl": "https://picsum.photos/seed/nt1/400/200",
+      "imageHint": "saas logo"
     }
   ]
 }

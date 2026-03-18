@@ -1,95 +1,285 @@
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Sparkles, Target, Zap } from 'lucide-react';
+import { 
+  ArrowRight, 
+  CheckCircle2, 
+  AlertCircle, 
+  TrendingUp, 
+  ShieldCheck, 
+  MousePointerClick, 
+  Search, 
+  RefreshCw, 
+  Zap,
+  Star
+} from 'lucide-react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/card';
 
 export default function Home() {
-  const heroImage = PlaceHolderImages.find(img => img.id === 'hero-dashboard');
+  const notionLogo = PlaceHolderImages.find(img => img.id === 'notion-mock');
+  const perplexityLogo = PlaceHolderImages.find(img => img.id === 'perplexity-mock');
 
   return (
-    <div className="flex flex-col min-h-[calc(100vh-80px)]">
+    <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="pt-24 pb-32 px-6">
+      <section className="pt-24 pb-20 px-6">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#f3f3f3] text-[#111111] text-sm font-medium mb-8">
-            <Sparkles className="w-4 h-4 text-[#EE8412]" />
-            <span>AI-Powered Partnership Engine</span>
-          </div>
-          <h1 className="text-6xl md:text-8xl font-bold max-w-4xl mb-8">
-            Grow faster together with <span className="text-transparent bg-clip-text ai-gradient">Intelligent</span> partnerships.
+          <Badge className="bg-[#f3f3f3] text-[#111111] hover:bg-[#f3f3f3] border-none px-4 py-1.5 mb-8 rounded-full text-xs font-bold tracking-widest uppercase">
+            Partner Perks Platform
+          </Badge>
+          <h1 className="text-6xl md:text-8xl font-bold max-w-5xl mb-8 leading-tight">
+            Get high-intent users by partnering with <span className="text-transparent bg-clip-text ai-gradient">complementary products</span>
           </h1>
-          <p className="text-xl md:text-2xl text-[#6b6b6b] max-w-2xl mb-12 font-normal leading-relaxed">
-            PartnerPath AI identifies, connects, and automates mutual growth opportunities with partners who share your audience.
+          <p className="text-xl md:text-2xl text-[#6b6b6b] max-w-3xl mb-12 font-normal leading-relaxed">
+            PerksHub helps you partner with complementary products and offer exclusive deals to their users to drive high-intent sign-ups.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button asChild className="pill-button bg-[#111111] text-white h-[52px] text-lg px-10">
-              <Link href="/discover">Find Your Partners <ArrowRight className="ml-2 w-5 h-5" /></Link>
-            </Button>
-            <Button variant="secondary" asChild className="pill-button bg-[#f3f3f3] text-[#111111] h-[52px] text-lg px-10">
-              <Link href="/analytics">View Demo</Link>
+          
+          <div className="flex flex-col items-center gap-6 mb-16">
+            <div className="flex flex-col sm:flex-row gap-6 text-left">
+              {[
+                "Get discovered by high-intent users",
+                "Convert them with exclusive deals",
+                "Grow through a network of partnerships"
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-2 font-medium text-[#111111]">
+                  <CheckCircle2 className="w-5 h-5 text-accent" />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+            <Button asChild className="pill-button bg-[#111111] text-white h-[56px] text-lg px-12 group">
+              <Link href="/discover">Get in touch <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /></Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Product Preview */}
-      <section className="px-6 pb-32">
-        <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden border border-[#eeeeee] shadow-2xl shadow-black/5 bg-white relative">
-          <div className="p-4 border-b border-[#eeeeee] bg-[#f9f9f9] flex gap-2">
-            <div className="w-3 h-3 rounded-full bg-red-400" />
-            <div className="w-3 h-3 rounded-full bg-yellow-400" />
-            <div className="w-3 h-3 rounded-full bg-green-400" />
-          </div>
-          {heroImage && (
-            <Image
-              src={heroImage.imageUrl}
-              alt={heroImage.description}
-              width={1200}
-              height={800}
-              className="w-full h-auto object-cover"
-              data-ai-hint={heroImage.imageHint}
-            />
-          )}
-        </div>
-      </section>
-
-      {/* Features Grid */}
-      <section className="bg-[#f9f9f9] py-32 px-6 border-y border-[#eeeeee]">
+      {/* Problem Section */}
+      <section className="py-24 px-6 bg-white border-y border-[#eeeeee]">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="flex flex-col gap-4">
-              <div className="w-12 h-12 rounded-xl ai-gradient flex items-center justify-center text-white mb-2">
-                <Target className="w-6 h-6" />
-              </div>
-              <h3 className="text-2xl font-bold">Intelligent Discovery</h3>
-              <p className="text-lg">Our AI engine scans millions of profiles to find partners with complementary product categories and shared audiences.</p>
-            </div>
-            <div className="flex flex-col gap-4">
-              <div className="w-12 h-12 rounded-xl ai-gradient flex items-center justify-center text-white mb-2">
-                <Sparkles className="w-6 h-6" />
-              </div>
-              <h3 className="text-2xl font-bold">Automated Outreach</h3>
-              <p className="text-lg">Generate personalized, high-conversion outreach messages tailored to each potential partner's specific value proposition.</p>
-            </div>
-            <div className="flex flex-col gap-4">
-              <div className="w-12 h-12 rounded-xl ai-gradient flex items-center justify-center text-white mb-2">
-                <Zap className="w-6 h-6" />
-              </div>
-              <h3 className="text-2xl font-bold">Perk Management</h3>
-              <p className="text-lg">Design and distribute exclusive perks, discounts, and trials through your partner network with built-in tracking.</p>
-            </div>
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Traditional Growth Playbooks are breaking down</h2>
+            <p className="text-xl text-[#6b6b6b] max-w-2xl mx-auto">
+              Most acquisition channels are saturated, expensive, and drive low-intent traffic. It's getting harder to reach and convert the right users.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { 
+                title: "Crowded channels", 
+                desc: "Everyone competes in the same space, making it harder to stand out.",
+                icon: AlertCircle 
+              },
+              { 
+                title: "Low intent traffic", 
+                desc: "Lots of views, but very few high-intent users who actually convert.",
+                icon: MousePointerClick 
+              },
+              { 
+                title: "Low ROI", 
+                desc: "Rising CAC and falling conversion is crushing margins.",
+                icon: TrendingUp 
+              },
+              { 
+                title: "Lack of trust signals", 
+                desc: "Amidst so much noise, people rely on trusted recommendations.",
+                icon: ShieldCheck 
+              }
+            ].map((item, i) => (
+              <Card key={i} className="border-none shadow-none bg-[#f9f9f9] rounded-3xl p-4">
+                <CardContent className="pt-6">
+                  <item.icon className="w-8 h-8 text-accent mb-6" />
+                  <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                  <p className="text-[#6b6b6b]">{item.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Footer */}
-      <section className="py-32 px-6 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-5xl font-bold mb-8">Ready to scale your ecosystem?</h2>
-          <p className="text-xl text-[#6b6b6b] mb-12">Join 500+ enterprises building the future of collaborative growth.</p>
-          <Button asChild className="pill-button bg-[#111111] text-white h-[52px] px-10">
-            <Link href="/discover">Get Started for Free</Link>
+      {/* Solution Section */}
+      <section className="py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Acquire high-intent users through Partner Perks</h2>
+            <p className="text-xl text-[#6b6b6b] max-w-2xl mx-auto">
+              Join partner perks programs of complementary products - reach the right audience, offer exclusive deals that drive conversion, and build a scalable acquisition channel.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            {[
+              {
+                step: "1",
+                title: "Get discovered by relevant audience",
+                desc: "Join Perk Programs of complementary products and get found by relevant audience."
+              },
+              {
+                step: "2",
+                title: "Incentivize users with exclusive perks",
+                desc: "Drive trials and conversions with tailored discounts, free credits, or exclusive access."
+              },
+              {
+                step: "3",
+                title: "Drive growth through partnerships",
+                desc: "Every new partnership becomes a steady, repeatable source of high-quality users."
+              }
+            ].map((item, i) => (
+              <div key={i} className="flex flex-col items-center text-center group">
+                <div className="w-12 h-12 rounded-full ai-gradient flex items-center justify-center text-white font-bold text-xl mb-6 shadow-lg shadow-orange-500/20">
+                  {item.step}
+                </div>
+                <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
+                <p className="text-lg text-[#6b6b6b]">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Proof Section */}
+      <section className="py-24 px-6 bg-[#f9f9f9] border-y border-[#eeeeee]">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">A proven playbook used by the best</h2>
+            <p className="text-xl text-[#6b6b6b]">Top SaaS and Creators already offer perks through partner ecosystems.</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <Card className="border-[#eeeeee] rounded-3xl overflow-hidden bg-white">
+              <div className="p-8">
+                <div className="h-12 w-32 relative mb-6">
+                  {perplexityLogo && <Image src={perplexityLogo.imageUrl} alt="Perplexity" fill className="object-contain" />}
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Perplexity</h3>
+                <p className="text-[#6b6b6b]">Perplexity offers 1-year Pro access to subscribers of Lenny's Newsletter, Airtel and more.</p>
+              </div>
+            </Card>
+            <Card className="border-[#eeeeee] rounded-3xl overflow-hidden bg-white">
+              <div className="p-8">
+                <div className="h-12 w-32 relative mb-6">
+                  {notionLogo && <Image src={notionLogo.imageUrl} alt="Notion" fill className="object-contain" />}
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Notion</h3>
+                <p className="text-[#6b6b6b]">Notion offers exclusive credits and perks to communities, accelerators, and products.</p>
+              </div>
+            </Card>
+          </div>
+          <p className="text-center text-sm font-bold uppercase tracking-widest text-[#6b6b6b]">
+            Many more prominent brands offering partner perks
+          </p>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Everything you need to run partner perks program</h2>
+            <p className="text-xl text-[#6b6b6b]">Create perks, manage partnerships, track performance, and scale from one platform.</p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8 mb-12">
+            {[
+              {
+                title: "Create tailored perks for partners and users",
+                desc: "Create perks with discounts, credits, trials, and commissions customized for each partner."
+              },
+              {
+                title: "Manage Partner and Perks easily in one place",
+                desc: "Manage partners, deals, access rules, and redemptions in one place without the complexity."
+              },
+              {
+                title: "Create your own Partner Perks Program",
+                desc: "Create a branded perks page to offer partner perks and add more value to your users."
+              }
+            ].map((item, i) => (
+              <Card key={i} className="border-[#eeeeee] rounded-3xl p-4 smooth-transition hover:shadow-xl hover:shadow-black/5">
+                <CardContent className="pt-6">
+                  <h3 className="text-xl font-bold mb-4">{item.title}</h3>
+                  <p className="text-[#6b6b6b]">{item.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { title: "Tiered Partner Perks", desc: "Offer different perks based on partner plans.", icon: Star },
+              { title: "Track Performance", desc: "Monitor views, unlocks, and conversions.", icon: TrendingUp },
+              { title: "Partner Discovery", desc: "Get discovered by partners through directory.", icon: Search },
+              { title: "Managed Payouts", desc: "Automate payouts & settlements.", icon: Zap, comingSoon: true }
+            ].map((item, i) => (
+              <div key={i} className="p-6 border border-[#eeeeee] rounded-2xl relative">
+                {item.comingSoon && (
+                  <Badge className="absolute -top-3 right-4 bg-accent/10 text-accent border-none text-[10px] font-bold">Coming Soon</Badge>
+                )}
+                <item.icon className="w-6 h-6 text-[#111111] mb-4" />
+                <h4 className="font-bold mb-1">{item.title}</h4>
+                <p className="text-sm text-[#6b6b6b]">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AI Growth Section */}
+      <section className="py-24 px-6 bg-[#111111] text-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+            <div className="max-w-2xl">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Grow partnerships without the heavy lifting</h2>
+              <p className="text-xl text-[#6b6b6b]">Find the right partners, exchange perks effortlessly, and start growing.</p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Partner Directory",
+                desc: "Discover and connect with products already looking for partnerships.",
+                comingSoon: true,
+                icon: Search
+              },
+              {
+                title: "Easy Partner Outreach",
+                desc: "Find partners with overlapping audiences and reach out with proposals faster with built-in AI.",
+                icon: MousePointerClick
+              },
+              {
+                title: "Two-Way Perks Exchange",
+                desc: "Onboard new partners in minutes and set up mutual perk exchange deals without friction.",
+                icon: RefreshCw
+              }
+            ].map((item, i) => (
+              <div key={i} className="p-8 rounded-3xl bg-white/5 border border-white/10 relative">
+                {item.comingSoon && (
+                  <Badge className="absolute top-8 right-8 bg-white/10 text-white/60 border-none text-[10px] font-bold">Coming Soon</Badge>
+                )}
+                <item.icon className="w-10 h-10 text-accent mb-6" />
+                <h3 className="text-2xl font-bold mb-4 text-white">{item.title}</h3>
+                <p className="text-[#6b6b6b] leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-32 px-6 bg-white relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full ai-gradient opacity-5 blur-[120px] pointer-events-none" />
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h2 className="text-5xl md:text-6xl font-bold mb-8">Start acquiring new users through partnerships</h2>
+          <p className="text-xl text-[#6b6b6b] mb-12 max-w-2xl mx-auto">
+            Reach high-intent audiences through complementary products and turn partnerships into a scalable acquisition channel.
+          </p>
+          <Button asChild className="pill-button bg-[#111111] text-white h-[60px] px-12 text-xl group">
+            <Link href="/discover">Get in touch <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" /></Link>
           </Button>
         </div>
       </section>

@@ -22,10 +22,6 @@ export default function Home() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative pt-12 pb-16 md:pt-16 md:pb-20 px-6 overflow-hidden bg-white">
-        {/* Decorative background hues - Layered over image on desktop, reduced on mobile */}
-        <div className="absolute -top-12 -right-12 md:-top-24 md:-right-24 w-[300px] h-[300px] md:w-[600px] md:h-[600px] ai-gradient opacity-[0.25] md:opacity-[0.5] blur-[100px] md:blur-[140px] rounded-full pointer-events-none z-20" />
-        <div className="absolute top-3/4 -left-24 md:top-1/2 md:-left-48 w-[250px] h-[250px] md:w-[500px] md:h-[500px] ai-gradient opacity-[0.2] md:opacity-[0.45] blur-[80px] md:blur-[120px] rounded-full pointer-events-none z-10" />
-        
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="max-w-3xl text-left mb-8">
             <div className="opacity-0 animate-blur-in">
@@ -69,7 +65,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Featured Showcase Image - No rounded corners or shadow as requested */}
+          {/* Featured Showcase Image */}
           <div className="relative z-0 opacity-0 animate-blur-in delay-400">
              <Image 
                 src="/assets/Frame.png" 
@@ -268,7 +264,6 @@ export default function Home() {
 
         {/* Final CTA */}
         <section className="py-24 px-6 bg-white relative overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full ai-gradient opacity-5 blur-[100px] pointer-events-none" />
           <div className="max-w-5xl mx-auto relative z-10 text-left">
             <div className="max-w-3xl">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium mb-6 text-left">Start acquiring new users through partnerships</h2>

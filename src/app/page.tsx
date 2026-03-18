@@ -73,7 +73,7 @@ export default function Home() {
             </div>
             
             <div className="flex justify-start opacity-0 animate-blur-in delay-400">
-              <Button asChild className="pill-button bg-[#111111] text-white h-[40px] text-base px-8 group shadow-xl shadow-black/5 hover:shadow-black/10 transition-all duration-300">
+              <Button asChild className="pill-button bg-[#111111] text-white h-[38px] text-base px-6 group shadow-xl shadow-black/5 hover:shadow-black/10 transition-all duration-300">
                 <Link href="/discover">
                   Get started 
                   <svg className="ml-2 w-8 h-5 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -429,7 +429,7 @@ export default function Home() {
                 Reach high-intent audiences through complementary products and turn partnerships into a scalable acquisition channel.
               </p>
               <div className="flex justify-start">
-                <Button asChild className="pill-button bg-[#111111] text-white h-[48px] px-8 text-lg group">
+                <Button asChild className="pill-button bg-[#111111] text-white h-[42px] px-6 text-base group">
                   <Link href="/discover">Get in touch <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /></Link>
                 </Button>
               </div>

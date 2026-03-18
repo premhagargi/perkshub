@@ -22,9 +22,9 @@ export default function Home() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative pt-24 pb-32 md:pt-32 md:pb-40 px-6 overflow-hidden bg-white">
-        {/* Subtle decorative background hues */}
-        <div className="absolute -top-24 -right-24 w-[500px] h-[500px] ai-gradient opacity-[0.07] blur-[120px] rounded-full pointer-events-none" />
-        <div className="absolute top-1/2 -left-48 w-[400px] h-[400px] ai-gradient opacity-[0.04] blur-[100px] rounded-full pointer-events-none" />
+        {/* Subtle decorative background hues - Slightly darkened opacity */}
+        <div className="absolute -top-24 -right-24 w-[500px] h-[500px] ai-gradient opacity-[0.08] blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 -left-48 w-[400px] h-[400px] ai-gradient opacity-[0.06] blur-[100px] rounded-full pointer-events-none" />
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="max-w-3xl text-left">
@@ -37,7 +37,7 @@ export default function Home() {
             </h1>
             
             <p className="text-lg md:text-xl text-[#6b6b6b] max-w-xl mb-8 font-normal leading-relaxed">
-              PartnerPath AI helps you partner with the products your users already love, driving scalable growth through trusted network recommendations.
+              Perkshub helps you partner with the products your users already love, driving scalable growth through trusted network recommendations.
             </p>
 
             <div className="space-y-3 mb-10 animate-in fade-in slide-in-from-bottom-4 duration-700">

@@ -172,7 +172,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Repeated Section - As requested */}
+      {/* Repeated Section - Examples of proven playbooks */}
       <section className="py-16 px-6 bg-white border-t border-[#eeeeee]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -185,15 +185,15 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                label: "DISCOVERY",
-                title: "Get discovered by relevant audience",
-                desc: "Join Perk Programs of complementary products and get found by relevant audience.",
-                icon: Users
+                label: "EXAMPLE",
+                title: "Perplexity",
+                desc: "Perplexity offers 1-year Pro access to subscribers Lenny's Newsletter, Airtel and more",
+                icon: Zap
               },
               {
-                label: "CONVERSION",
-                title: "Incentivize users with exclusive perks",
-                desc: "Drive trials and conversions with tailored discounts, free credits, or exclusive access.",
+                label: "EXAMPLE",
+                title: "Notion",
+                desc: "Notion offers exclusive credits and perks to communities, accelerators, and products.",
                 icon: Gift
               },
               {
@@ -332,8 +332,8 @@ export default function Home() {
       {/* Final CTA */}
       <section className="py-24 px-6 bg-white relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full ai-gradient opacity-5 blur-[100px] pointer-events-none" />
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="max-w-3xl text-left">
+        <div className="max-w-7xl mx-auto relative z-10 text-left">
+          <div className="max-w-3xl">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Start acquiring new users through partnerships</h2>
             <p className="text-lg text-[#6b6b6b] mb-10 max-w-xl">
               Reach high-intent audiences through complementary products and turn partnerships into a scalable acquisition channel.

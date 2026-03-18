@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -23,7 +24,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative pt-12 pb-16 md:pt-16 md:pb-20 px-6 overflow-hidden bg-white">
         <div className="max-w-6xl mx-auto relative z-10">
-          <div className="max-w-3xl text-left mb-8">
+          <div className="max-w-3xl text-left">
             <div className="opacity-0 animate-blur-in">
               <Badge className="bg-[#f3f3f3] text-[#6b6b6b] hover:bg-[#f3f3f3] border-none px-4 py-1.5 mb-2 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase">
                 Partner Perks Platform
@@ -64,25 +65,25 @@ export default function Home() {
               </Button>
             </div>
           </div>
-
-          {/* Featured Showcase Image */}
-          <div className="relative z-0 opacity-0 animate-blur-in delay-400">
-             <Image 
-                src="/assets/Frame.png" 
-                alt="Partner Platform Showcase"
-                width={1200}
-                height={675}
-                className="w-full h-auto object-cover"
-                priority
-              />
-          </div>
         </div>
       </section>
 
       {/* Main Content Wrapper with Side Borders */}
       <div className="max-w-6xl mx-auto border-x border-[#eeeeee]">
+        {/* Showcase Image Section */}
+        <section className="relative overflow-hidden border-b border-[#eeeeee] opacity-0 animate-blur-in delay-400">
+          <Image 
+            src="/assets/Frame.png" 
+            alt="Partner Platform Showcase"
+            width={1200}
+            height={675}
+            className="w-full h-auto object-cover"
+            priority
+          />
+        </section>
+
         {/* Problem Section */}
-        <section className="py-20 px-6 bg-white border-y border-[#eeeeee]">
+        <section className="py-20 px-6 bg-white border-b border-[#eeeeee]">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-medium mb-4">Traditional Growth Playbooks are breaking down</h2>

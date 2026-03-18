@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'link';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';

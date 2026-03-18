@@ -130,21 +130,18 @@ export default function Home() {
                 label: "DISCOVERY",
                 title: "Get discovered by relevant audience",
                 desc: "Join Perk Programs of complementary products and get found by relevant audience.",
-                cta: "Learn more",
                 icon: Users
               },
               {
                 label: "CONVERSION",
                 title: "Incentivize users with exclusive perks",
                 desc: "Drive trials and conversions with tailored discounts, free credits, or exclusive access.",
-                cta: "See examples",
                 icon: Gift
               },
               {
                 label: "GROWTH",
                 title: "Drive growth through partnerships",
                 desc: "Every new partnership becomes a steady, repeatable source of high-quality users.",
-                cta: "Get started",
                 icon: Rocket,
                 featured: true
               }
@@ -159,7 +156,7 @@ export default function Home() {
                   </div>
                 )}
                 
-                <div className="bg-[#EFEFF1] h-56 flex items-center justify-center relative">
+                <div className="bg-[#EFEFF1] h-64 flex items-center justify-center relative">
                   <item.icon className="w-20 h-20 text-gray-400 transform transition-transform group-hover:scale-110 duration-500" />
                 </div>
 
@@ -173,12 +170,6 @@ export default function Home() {
                   <p className="text-sm text-gray-500 mt-2 leading-relaxed">
                     {item.desc}
                   </p>
-                  
-                  <div className="mt-auto pt-6">
-                    <div className="bg-gray-100 rounded-full px-4 py-2 text-sm font-medium w-fit text-gray-700 transition-colors group-hover:bg-gray-200 flex items-center gap-1">
-                      {item.cta} <ArrowRight className="w-3.5 h-3.5" />
-                    </div>
-                  </div>
                 </div>
               </div>
             ))}

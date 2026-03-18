@@ -152,7 +152,7 @@ export default function Home() {
                   <span className="text-[10px] uppercase font-bold tracking-widest text-[#FF5A1F] mt-2">
                     {item.label}
                   </span>
-                  <h3 className="text-lg font-semibold text-gray-900 mt-1 leading-snug">
+                  <h3 className="text-lg font-medium text-gray-900 mt-1 leading-snug">
                     {item.title}
                   </h3>
                   <p className="text-sm text-gray-500 mt-2 leading-relaxed">
@@ -208,7 +208,7 @@ export default function Home() {
                   <span className="text-[10px] uppercase font-bold tracking-widest text-[#FF5A1F] mt-2">
                     {item.label}
                   </span>
-                  <h3 className="text-lg font-semibold text-gray-900 mt-1 leading-snug">
+                  <h3 className="text-lg font-medium text-gray-900 mt-1 leading-snug">
                     {item.title}
                   </h3>
                   <p className="text-sm text-gray-500 mt-2 leading-relaxed">
@@ -262,7 +262,7 @@ export default function Home() {
                   <span className="text-[10px] uppercase font-bold tracking-widest text-[#FF5A1F] mt-2">
                     {item.label}
                   </span>
-                  <h3 className="text-lg font-semibold text-gray-900 mt-1 leading-snug">
+                  <h3 className="text-lg font-medium text-gray-900 mt-1 leading-snug">
                     {item.title}
                   </h3>
                   <p className="text-sm text-gray-500 mt-2 leading-relaxed">

@@ -177,6 +177,69 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Repeated Section - As requested */}
+      <section className="py-16 px-6 bg-white border-t border-[#eeeeee]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Acquire high-intent users through Partner Perks</h2>
+            <p className="text-lg text-[#6b6b6b] max-w-2xl mx-auto">
+              Join partner perks programs of complementary products - reach the right audience, offer exclusive deals that drive conversion, and build a scalable acquisition channel.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                label: "DISCOVERY",
+                title: "Get discovered by relevant audience",
+                desc: "Join Perk Programs of complementary products and get found by relevant audience.",
+                icon: Users
+              },
+              {
+                label: "CONVERSION",
+                title: "Incentivize users with exclusive perks",
+                desc: "Drive trials and conversions with tailored discounts, free credits, or exclusive access.",
+                icon: Gift
+              },
+              {
+                label: "GROWTH",
+                title: "Drive growth through partnerships",
+                desc: "Every new partnership becomes a steady, repeatable source of high-quality users.",
+                icon: Rocket,
+                featured: true
+              }
+            ].map((item, i) => (
+              <div 
+                key={i} 
+                className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden"
+              >
+                {item.featured && (
+                  <div className="absolute top-4 right-4 bg-[#FF5A1F] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider z-20">
+                    Featured
+                  </div>
+                )}
+                
+                <div className="bg-[#EFEFF1] h-64 flex items-center justify-center relative">
+                  <item.icon className="w-20 h-20 text-gray-400 transform transition-transform group-hover:scale-110 duration-500" />
+                </div>
+
+                <div className="p-6 flex flex-col flex-1">
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-[#FF5A1F] mt-2">
+                    {item.label}
+                  </span>
+                  <h3 className="text-lg font-semibold text-gray-900 mt-1 leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-gray-500 mt-2 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Proof Section */}
       <section className="py-20 px-6 bg-[#f9f9f9] border-y border-[#eeeeee]">
         <div className="max-w-7xl mx-auto">

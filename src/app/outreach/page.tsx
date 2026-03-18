@@ -61,7 +61,7 @@ function OutreachContent() {
 
       <div className="grid lg:grid-cols-2 gap-12">
         <div className="space-y-8">
-          <Card className="border-[#eeeeee]">
+          <Card className="border-[#eeeeee] rounded-xl">
             <CardHeader>
               <CardTitle>Drafting Context</CardTitle>
               <CardDescription>Input details about the partner and your value to personalize the message.</CardDescription>
@@ -99,7 +99,7 @@ function OutreachContent() {
 
         <div className="relative">
           {generatedMessage ? (
-            <Card className="border-[#eeeeee] h-full flex flex-col">
+            <Card className="border-[#eeeeee] h-full flex flex-col rounded-xl">
               <CardHeader className="flex flex-row items-center justify-between space-y-0">
                 <div>
                   <CardTitle>Draft Message</CardTitle>
@@ -110,13 +110,13 @@ function OutreachContent() {
                 </Button>
               </CardHeader>
               <CardContent className="flex-grow">
-                <div className="bg-[#f9f9f9] p-8 rounded-2xl border border-[#eeeeee] font-mono text-sm leading-relaxed whitespace-pre-wrap">
+                <div className="bg-[#f9f9f9] p-8 rounded-xl border border-[#eeeeee] font-mono text-sm leading-relaxed whitespace-pre-wrap">
                   {generatedMessage}
                 </div>
               </CardContent>
             </Card>
           ) : (
-            <div className="h-full min-h-[400px] flex flex-col items-center justify-center text-center p-12 border-2 border-dashed border-[#eeeeee] rounded-3xl bg-white/50">
+            <div className="h-full min-h-[400px] flex flex-col items-center justify-center text-center p-12 border-2 border-dashed border-[#eeeeee] rounded-xl bg-white/50">
               <div className="w-16 h-16 bg-[#f3f3f3] rounded-full flex items-center justify-center mb-6">
                 <Send className="w-8 h-8 text-[#6b6b6b]" />
               </div>
@@ -133,7 +133,7 @@ function OutreachContent() {
 export default function OutreachPage() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <OutreachContent />
+      < OutreachContent />
     </Suspense>
   );
 }

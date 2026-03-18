@@ -9,8 +9,6 @@ import {
   CartesianGrid, 
   Tooltip, 
   ResponsiveContainer,
-  LineChart,
-  Line,
   AreaChart,
   Area
 } from 'recharts';
@@ -54,7 +52,7 @@ export default function AnalyticsPage() {
           { title: 'Conversions', value: '8.4k', change: '+18%', icon: ArrowUpRight },
           { title: 'Revenue Share', value: '$124k', change: '+7%', icon: Wallet },
         ].map((stat, i) => (
-          <Card key={i} className="border-[#eeeeee] shadow-sm smooth-transition hover:shadow-lg">
+          <Card key={i} className="border-[#eeeeee] shadow-sm smooth-transition hover:shadow-lg rounded-xl">
             <CardContent className="pt-6">
               <div className="flex justify-between items-start mb-4">
                 <div className="w-10 h-10 rounded-lg bg-[#f9f9f9] flex items-center justify-center">
@@ -72,7 +70,7 @@ export default function AnalyticsPage() {
       </div>
 
       <div className="grid lg:grid-cols-2 gap-8 mb-12">
-        <Card className="border-[#eeeeee]">
+        <Card className="border-[#eeeeee] rounded-xl">
           <CardHeader>
             <CardTitle>Conversion Growth</CardTitle>
             <CardDescription>Monthly conversion trends across all partner perks.</CardDescription>
@@ -98,7 +96,7 @@ export default function AnalyticsPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-[#eeeeee]">
+        <Card className="border-[#eeeeee] rounded-xl">
           <CardHeader>
             <CardTitle>Top Performing Partners</CardTitle>
             <CardDescription>Revenue contribution by partner company.</CardDescription>

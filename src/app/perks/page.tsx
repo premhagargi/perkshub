@@ -43,7 +43,7 @@ export default function PerksPage() {
 
       <div className="grid lg:grid-cols-3 gap-12">
         <div className="lg:col-span-1">
-          <Card className="border-[#eeeeee] sticky top-32 shadow-sm">
+          <Card className="border-[#eeeeee] sticky top-32 shadow-sm rounded-xl">
             <CardHeader>
               <CardTitle>Create New Perk</CardTitle>
               <CardDescription>Define the value and terms for your partners.</CardDescription>
@@ -91,7 +91,7 @@ export default function PerksPage() {
         <div className="lg:col-span-2">
           <div className="grid md:grid-cols-2 gap-6">
             {perks.map((perk) => (
-              <Card key={perk.id} className="border-[#eeeeee] smooth-transition hover:border-accent group">
+              <Card key={perk.id} className="border-[#eeeeee] smooth-transition hover:border-accent group rounded-xl">
                 <CardHeader className="flex flex-row items-center justify-between pb-2">
                   <div className="w-12 h-12 rounded-xl bg-[#f3f3f3] flex items-center justify-center">
                     <Gift className="w-6 h-6 text-[#111111]" />
@@ -118,7 +118,7 @@ export default function PerksPage() {
           </div>
           
           {perks.length === 0 && (
-            <div className="h-[400px] flex flex-col items-center justify-center text-center p-12 border-2 border-dashed border-[#eeeeee] rounded-3xl bg-white/50">
+            <div className="h-[400px] flex flex-col items-center justify-center text-center p-12 border-2 border-dashed border-[#eeeeee] rounded-xl bg-white/50">
               <Gift className="w-12 h-12 text-[#eeeeee] mb-4" />
               <h3 className="text-xl font-bold mb-2">No perks created yet</h3>
               <p className="text-[#6b6b6b]">Start by creating your first partnership offer on the left.</p>

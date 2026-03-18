@@ -37,7 +37,7 @@ export default function Home() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative pt-24 pb-24 md:pt-32 md:pb-32 px-6 overflow-hidden bg-white">
-        {/* Decorative background hues - Slightly darker as requested */}
+        {/* Decorative background hues */}
         <div className="absolute -top-24 -right-24 w-[600px] h-[600px] ai-gradient opacity-[0.5] blur-[140px] rounded-full pointer-events-none" />
         <div className="absolute top-1/2 -left-48 w-[500px] h-[500px] ai-gradient opacity-[0.45] blur-[120px] rounded-full pointer-events-none" />
         
@@ -79,7 +79,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Featured Perks Grid - Integrated in Hero */}
+          {/* Featured Perks Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 opacity-0 animate-blur-in delay-400">
             {perksData.map((perk, i) => {
               const placeholder = getPlaceholderById(perk.logoId);
@@ -156,7 +156,7 @@ export default function Home() {
                   icon: ShieldCheck 
                 }
               ].map((item, i) => (
-                <Card key={i} className="border-none shadow-md shadow-black/5 bg-[#f9f9f9] rounded-3xl p-2 smooth-transition hover:shadow-lg hover:shadow-black/10">
+                <Card key={i} className="border-none shadow-md shadow-black/5 bg-[#f9f9f9] rounded-xl p-2 smooth-transition hover:shadow-lg hover:shadow-black/10">
                   <CardContent className="pt-6">
                     <item.icon className="w-7 h-7 text-accent mb-4" />
                     <h3 className="text-lg font-medium mb-2">{item.title}</h3>
@@ -201,7 +201,7 @@ export default function Home() {
               ].map((item, i) => (
                 <div 
                   key={i} 
-                  className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-3xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden"
+                  className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden"
                 >
                   <div className="bg-[#EFEFF1] h-64 flex items-center justify-center relative">
                     <item.icon className="w-20 h-20 text-gray-400 transform transition-transform group-hover:scale-110 duration-500" />
@@ -257,7 +257,7 @@ export default function Home() {
               ].map((item, i) => (
                 <div 
                   key={i} 
-                  className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-3xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden"
+                  className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden"
                 >
                   <div className="bg-[#EFEFF1] h-64 flex items-center justify-center relative">
                     <item.icon className="w-20 h-20 text-gray-400 transform transition-transform group-hover:scale-110 duration-500" />
@@ -311,7 +311,7 @@ export default function Home() {
               ].map((item, i) => (
                 <div 
                   key={i} 
-                  className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-3xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden"
+                  className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden"
                 >
                   <div className="bg-[#EFEFF1] h-64 flex items-center justify-center relative">
                     <item.icon className="w-20 h-20 text-gray-400 transform transition-transform group-hover:scale-110 duration-500" />
@@ -339,11 +339,11 @@ export default function Home() {
                 { title: "Partner Discovery", desc: "Get discovered by partners through directory.", icon: Search },
                 { title: "Managed Payouts", desc: "Automate payouts & settlements.", icon: Zap, comingSoon: true }
               ].map((item, i) => (
-                <div key={i} className="p-8 border border-[#eeeeee] rounded-[2.5rem] relative bg-white smooth-transition hover:border-accent/30 hover:shadow-xl hover:shadow-black/5">
+                <div key={i} className="p-8 border border-[#eeeeee] rounded-xl relative bg-white smooth-transition hover:border-accent/30 hover:shadow-xl hover:shadow-black/5">
                   {item.comingSoon && (
                     <Badge className="absolute -top-3 right-6 bg-accent/10 text-accent border-none text-[10px] font-bold px-3 py-1 rounded-full">Coming Soon</Badge>
                   )}
-                  <div className="w-12 h-12 rounded-2xl bg-[#f9f9f9] flex items-center justify-center mb-6">
+                  <div className="w-12 h-12 rounded-lg bg-[#f9f9f9] flex items-center justify-center mb-6">
                     <item.icon className="w-6 h-6 text-[#111111]" />
                   </div>
                   <h4 className="text-lg font-medium mb-2">{item.title}</h4>
@@ -386,7 +386,7 @@ export default function Home() {
               ].map((item, i) => (
                 <div 
                   key={i} 
-                  className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-3xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden"
+                  className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden"
                 >
                   <div className="bg-[#EFEFF1] h-64 flex items-center justify-center relative">
                     {item.comingSoon && (

@@ -42,7 +42,7 @@ export default function DiscoverPage() {
 
       <div className="grid lg:grid-cols-[1fr,2fr] gap-12">
         <aside>
-          <Card className="border-[#eeeeee] shadow-sm sticky top-32">
+          <Card className="border-[#eeeeee] shadow-sm sticky top-32 rounded-xl">
             <CardHeader>
               <CardTitle>Business Profile</CardTitle>
               <CardDescription>Tell us about your company and what you're looking for.</CardDescription>
@@ -94,7 +94,7 @@ export default function DiscoverPage() {
 
         <section>
           {!results && !loading && (
-            <div className="h-full flex flex-col items-center justify-center text-center p-12 border-2 border-dashed border-[#eeeeee] rounded-3xl bg-white/50">
+            <div className="h-full flex flex-col items-center justify-center text-center p-12 border-2 border-dashed border-[#eeeeee] rounded-xl bg-white/50">
               <div className="w-16 h-16 bg-[#f3f3f3] rounded-full flex items-center justify-center mb-6">
                 <Target className="w-8 h-8 text-[#6b6b6b]" />
               </div>
@@ -106,8 +106,8 @@ export default function DiscoverPage() {
           {loading && (
             <div className="space-y-6">
               {[1, 2, 3].map((i) => (
-                <Card key={i} className="animate-pulse border-[#eeeeee]">
-                  <div className="h-40 bg-[#f3f3f3] rounded-lg" />
+                <Card key={i} className="animate-pulse border-[#eeeeee] rounded-xl">
+                  <div className="h-40 bg-[#f3f3f3] rounded-xl" />
                 </Card>
               ))}
             </div>
@@ -117,11 +117,11 @@ export default function DiscoverPage() {
             <div className="space-y-6">
               <h2 className="text-2xl font-bold px-2">Top Suggestions</h2>
               {results.suggestedPartners.map((partner, idx) => (
-                <Card key={idx} className="border-[#eeeeee] overflow-hidden smooth-transition hover:shadow-xl hover:shadow-black/5 group">
+                <Card key={idx} className="border-[#eeeeee] overflow-hidden smooth-transition hover:shadow-xl hover:shadow-black/5 group rounded-xl">
                   <div className="p-8">
                     <div className="flex justify-between items-start mb-6">
                       <div className="flex items-center gap-4">
-                        <div className="w-14 h-14 ai-gradient rounded-2xl flex items-center justify-center text-white text-xl font-bold">
+                        <div className="w-14 h-14 ai-gradient rounded-xl flex items-center justify-center text-white text-xl font-bold">
                           {partner.name.charAt(0)}
                         </div>
                         <div>

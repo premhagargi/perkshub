@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Loader2, Search, ArrowRight, Star } from 'lucide-react';
+import { Loader2, Search, ArrowRight, Star, Target } from 'lucide-react';
 import { aiPartnerDiscovery, AiPartnerDiscoveryOutput } from '@/ai/flows/ai-partner-discovery-flow';
 
 export default function DiscoverPage() {

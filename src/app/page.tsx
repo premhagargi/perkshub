@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { 
@@ -38,7 +37,7 @@ export default function Home() {
             </Badge>
             
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#111111] leading-[1.05] tracking-tight mb-8">
-              Acquire high-intent users through <span className="text-transparent bg-clip-text ai-gradient">complementary</span> products
+              Acquire high-intent users through complementary products
             </h1>
             
             <p className="text-xl md:text-2xl text-[#6b6b6b] max-w-xl mb-10 font-normal leading-relaxed">

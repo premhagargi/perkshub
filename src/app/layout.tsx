@@ -21,10 +21,6 @@ export default function RootLayout({
       </head>
       <body className="font-body selection:bg-accent/20">
         <div className="relative min-h-screen overflow-hidden">
-          {/* Background Decorations */}
-          <div className="fixed -top-[10%] -left-[5%] w-[40%] h-[40%] ai-gradient blob-blur rounded-full pointer-events-none" />
-          <div className="fixed -bottom-[10%] -right-[5%] w-[40%] h-[40%] ai-gradient blob-blur rounded-full pointer-events-none" />
-          
           <Navbar />
           <main className="relative z-10">{children}</main>
         </div>

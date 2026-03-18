@@ -151,20 +151,20 @@ export default function Home() {
             ].map((item, i) => (
               <div 
                 key={i} 
-                className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-2xl p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1"
+                className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden"
               >
                 {item.featured && (
-                  <div className="absolute top-4 right-4 bg-[#FF5A1F] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider z-10">
+                  <div className="absolute top-4 right-4 bg-[#FF5A1F] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider z-20">
                     Featured
                   </div>
                 )}
                 
-                <div className="bg-[#EFEFF1] rounded-xl h-44 flex items-center justify-center relative overflow-hidden">
-                  <item.icon className="w-16 h-16 text-gray-400 transform transition-transform group-hover:scale-110 group-hover:-translate-y-2 duration-500" />
+                <div className="bg-[#EFEFF1] h-56 flex items-center justify-center relative">
+                  <item.icon className="w-20 h-20 text-gray-400 transform transition-transform group-hover:scale-110 duration-500" />
                 </div>
 
-                <div className="flex flex-col flex-1">
-                  <span className="text-[10px] uppercase font-bold tracking-widest text-[#FF5A1F] mt-5">
+                <div className="p-6 flex flex-col flex-1">
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-[#FF5A1F] mt-2">
                     {item.label}
                   </span>
                   <h3 className="text-lg font-semibold text-gray-900 mt-1 leading-snug">

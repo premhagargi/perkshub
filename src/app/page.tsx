@@ -26,23 +26,23 @@ export default function Home() {
   const perksData = [
     { name: 'Pipedrive', members: '2,376', desc: 'Sales software to help you focus on the deals that matter.', perk: '20% off for 12 months', save: 'Save up to $2,376', logoId: 'brand-shopify' },
     { name: 'Google Cloud (GCP)', members: '10,333', desc: 'Cloud services by Google.', perk: '$2,000 in credits for 1 year', save: 'Save up to $350,000', logoId: 'brand-gcp' },
-    { name: 'HubSpot', members: '2,678', desc: 'CRM, marketing, automation & customer service software suite.', perk: '90% off the Professional and Enterprise plans...', save: 'Save up to $17,000', logoId: 'brand-hubspot' },
-    { name: 'Intercom', members: '2,943', desc: 'Strengthen relationships with your customers with an online...', perk: '1 year free on the Advanced plan', save: 'Save up to $6,108', logoId: 'brand-shopify' },
-    { name: 'Shopify', members: '1,952', desc: 'Ecommerce platform for online stores and retail POS systems.', perk: '$1/month for first 3 months', save: 'Save up to $4,500', logoId: 'brand-shopify' },
+    { name: 'HubSpot', members: '2,678', desc: 'CRM, marketing, automation & customer service suite.', perk: '90% off Professional plans', save: 'Save up to $17,000', logoId: 'brand-hubspot' },
+    { name: 'Intercom', members: '2,943', desc: 'Strengthen relationships with customers.', perk: '1 year free on Advanced', save: 'Save up to $6,108', logoId: 'brand-shopify' },
+    { name: 'Shopify', members: '1,952', desc: 'Ecommerce platform for online stores.', perk: '$1/mo for first 3 months', save: 'Save up to $4,500', logoId: 'brand-shopify' },
     { name: 'Airtable', members: '7,714', desc: 'Easily store and organize your data.', perk: '$1,000 in credits for 1 year', save: 'Save up to $1,000', logoId: 'brand-airtable' },
-    { name: 'Auth0', members: '1,331', desc: 'An easy-to-implement, adaptable authentication and authorization...', perk: '12 months free', save: 'Save up to $22,000', logoId: 'brand-hubspot' },
-    { name: 'ElevenLabs', members: '3,027', desc: 'Bring words to life with AI-powered voices.', perk: '12 months free (33 million characters...)', save: 'Save up to $4,000', logoId: 'brand-airtable' },
+    { name: 'Auth0', members: '1,331', desc: 'Adaptable authentication platform.', perk: '12 months free', save: 'Save up to $22,000', logoId: 'brand-hubspot' },
+    { name: 'ElevenLabs', members: '3,027', desc: 'AI-powered text-to-speech voices.', perk: '12 months free credits', save: 'Save up to $4,000', logoId: 'brand-airtable' },
   ];
 
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative pt-24 pb-32 md:pt-32 md:pb-40 px-6 overflow-hidden bg-white">
-        <div className="absolute -top-24 -right-24 w-[500px] h-[500px] ai-gradient opacity-[0.25] blur-[120px] rounded-full pointer-events-none" />
-        <div className="absolute top-1/2 -left-48 w-[400px] h-[400px] ai-gradient opacity-[0.2] blur-[100px] rounded-full pointer-events-none" />
+      <section className="relative pt-24 pb-24 md:pt-32 md:pb-32 px-6 overflow-hidden bg-white">
+        <div className="absolute -top-24 -right-24 w-[600px] h-[600px] ai-gradient opacity-[0.3] blur-[140px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 -left-48 w-[500px] h-[500px] ai-gradient opacity-[0.25] blur-[120px] rounded-full pointer-events-none" />
         
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="max-w-3xl text-left">
+          <div className="max-w-3xl text-left mb-20">
             <Badge className="bg-[#f3f3f3] text-[#111111] hover:bg-[#f3f3f3] border-none px-4 py-1.5 mb-6 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase">
               Partner Perks Platform
             </Badge>
@@ -76,17 +76,13 @@ export default function Home() {
               </Button>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Perks Grid Section */}
-      <section className="pb-24 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
+          {/* Perks Grid - Integrated in Hero */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {perksData.map((perk, i) => {
               const placeholder = getPlaceholderById(perk.logoId);
               return (
-                <Card key={i} className="border-[#eeeeee] shadow-none rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <Card key={i} className="border-[#eeeeee] shadow-none rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 bg-white/80 backdrop-blur-sm">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4 mb-4">
                       <div className="relative w-12 h-12 flex-shrink-0 rounded-lg border border-[#eeeeee] overflow-hidden bg-gray-50 flex items-center justify-center">

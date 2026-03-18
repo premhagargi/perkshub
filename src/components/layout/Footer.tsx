@@ -6,10 +6,19 @@ export default function Footer() {
   return (
     <footer className="bg-white border-t border-[#eeeeee] h-14 md:h-16 px-6 relative z-50">
       <div className="max-w-6xl mx-auto h-full flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group shrink-0">
-          <div className="w-7 h-7 ai-gradient rounded-lg flex items-center justify-center text-white font-bold text-base">P</div>
-          <span className="text-base font-bold tracking-tight text-[#111111]">Perkshub</span>
-        </Link>
+        <div className="flex items-center gap-8">
+          <Link href="/" className="flex items-center gap-2 group shrink-0">
+            <div className="w-7 h-7 ai-gradient rounded-lg flex items-center justify-center text-white font-bold text-base">P</div>
+            <span className="text-base font-bold tracking-tight text-[#111111]">Perkshub</span>
+          </Link>
+          
+          <div className="hidden md:flex items-center gap-6">
+            <Link href="/discover" className="text-xs font-medium text-[#6b6b6b] hover:text-[#111111] transition-colors">Discover</Link>
+            <Link href="/outreach" className="text-xs font-medium text-[#6b6b6b] hover:text-[#111111] transition-colors">Outreach</Link>
+            <Link href="/perks" className="text-xs font-medium text-[#6b6b6b] hover:text-[#111111] transition-colors">Perks</Link>
+            <Link href="/analytics" className="text-xs font-medium text-[#6b6b6b] hover:text-[#111111] transition-colors">Analytics</Link>
+          </div>
+        </div>
         
         <div className="flex items-center gap-6">
           <p className="text-[10px] md:text-xs text-[#999999] font-medium">

@@ -30,7 +30,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="max-w-3xl text-left mb-8">
             <div className="opacity-0 animate-blur-in">
-              <Badge className="bg-[#f3f3f3] text-[#111111] hover:bg-[#f3f3f3] border-none px-4 py-1.5 mb-2 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase">
+              <Badge className="bg-[#f3f3f3] text-[#6b6b6b] hover:bg-[#f3f3f3] border-none px-4 py-1.5 mb-2 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase">
                 Partner Perks Platform
               </Badge>
             </div>

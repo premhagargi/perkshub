@@ -37,9 +37,9 @@ export default function Home() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative pt-24 pb-24 md:pt-32 md:pb-32 px-6 overflow-hidden bg-white">
-        {/* Decorative background hues */}
-        <div className="absolute -top-24 -right-24 w-[600px] h-[600px] ai-gradient opacity-[0.45] blur-[140px] rounded-full pointer-events-none" />
-        <div className="absolute top-1/2 -left-48 w-[500px] h-[500px] ai-gradient opacity-[0.4] blur-[120px] rounded-full pointer-events-none" />
+        {/* Decorative background hues - Slightly darker as requested */}
+        <div className="absolute -top-24 -right-24 w-[600px] h-[600px] ai-gradient opacity-[0.5] blur-[140px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 -left-48 w-[500px] h-[500px] ai-gradient opacity-[0.45] blur-[120px] rounded-full pointer-events-none" />
         
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="max-w-3xl text-left mb-20">
@@ -201,7 +201,7 @@ export default function Home() {
               ].map((item, i) => (
                 <div 
                   key={i} 
-                  className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden"
+                  className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-3xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden"
                 >
                   <div className="bg-[#EFEFF1] h-64 flex items-center justify-center relative">
                     <item.icon className="w-20 h-20 text-gray-400 transform transition-transform group-hover:scale-110 duration-500" />
@@ -257,7 +257,7 @@ export default function Home() {
               ].map((item, i) => (
                 <div 
                   key={i} 
-                  className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden"
+                  className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-3xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden"
                 >
                   <div className="bg-[#EFEFF1] h-64 flex items-center justify-center relative">
                     <item.icon className="w-20 h-20 text-gray-400 transform transition-transform group-hover:scale-110 duration-500" />
@@ -311,7 +311,7 @@ export default function Home() {
               ].map((item, i) => (
                 <div 
                   key={i} 
-                  className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden"
+                  className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-3xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden"
                 >
                   <div className="bg-[#EFEFF1] h-64 flex items-center justify-center relative">
                     <item.icon className="w-20 h-20 text-gray-400 transform transition-transform group-hover:scale-110 duration-500" />
@@ -386,7 +386,7 @@ export default function Home() {
               ].map((item, i) => (
                 <div 
                   key={i} 
-                  className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden"
+                  className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-3xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden"
                 >
                   <div className="bg-[#EFEFF1] h-64 flex items-center justify-center relative">
                     {item.comingSoon && (

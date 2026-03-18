@@ -63,7 +63,7 @@ export default function Home() {
       <section className="py-20 px-6 bg-white border-y border-[#eeeeee]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Traditional Growth Playbooks are breaking down</h2>
+            <h2 className="text-3xl md:text-4xl font-medium mb-4">Traditional Growth Playbooks are breaking down</h2>
             <p className="text-lg text-[#6b6b6b] max-w-2xl mx-auto">
               Most acquisition channels are saturated, expensive, and drive low-intent traffic. It's getting harder to reach and convert the right users.
             </p>
@@ -108,7 +108,7 @@ export default function Home() {
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Acquire high-intent users through Partner Perks</h2>
+            <h2 className="text-3xl md:text-4xl font-medium mb-4">Acquire high-intent users through Partner Perks</h2>
             <p className="text-lg text-[#6b6b6b] max-w-2xl mx-auto">
               Join partner perks programs of complementary products - reach the right audience, offer exclusive deals that drive conversion, and build a scalable acquisition channel.
             </p>
@@ -167,74 +167,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Solution Section 2 - Repeated Section */}
-      <section className="py-16 px-6 bg-white border-t border-[#eeeeee]">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">A proven playbook used by the best</h2>
-            <p className="text-lg text-[#6b6b6b] max-w-2xl mx-auto">
-              Top SaaS and Creators already offer perks through partner ecosystems to reach high-intent users and drive adoption.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                label: "EXAMPLE",
-                title: "Notion",
-                desc: "Notion offers exclusive credits and perks to communities, accelerators, and products.",
-                icon: Gift
-              },
-              {
-                label: "EXAMPLE",
-                title: "Perplexity",
-                desc: "Perplexity offers 1-year Pro access to subscribers Lenny's Newsletter, Airtel and more",
-                icon: Zap
-              },
-              {
-                label: "GROWTH",
-                title: "Drive growth through partnerships",
-                desc: "Every new partnership becomes a steady, repeatable source of high-quality users.",
-                icon: Rocket,
-                featured: true
-              }
-            ].map((item, i) => (
-              <div 
-                key={i} 
-                className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden"
-              >
-                {item.featured && (
-                  <div className="absolute top-4 right-4 bg-[#FF5A1F] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider z-20">
-                    Featured
-                  </div>
-                )}
-                
-                <div className="bg-[#EFEFF1] h-64 flex items-center justify-center relative">
-                  <item.icon className="w-20 h-20 text-gray-400 transform transition-transform group-hover:scale-110 duration-500" />
-                </div>
-
-                <div className="p-6 flex flex-col flex-1">
-                  <span className="text-[10px] uppercase font-bold tracking-widest text-[#FF5A1F] mt-2">
-                    {item.label}
-                  </span>
-                  <h3 className="text-lg font-semibold text-gray-900 mt-1 leading-snug">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-gray-500 mt-2 leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Features Section */}
       <section className="py-20 px-6 bg-white border-t border-[#eeeeee]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Everything you need to run partner perks program</h2>
+            <h2 className="text-3xl md:text-4xl font-medium mb-4">Everything you need to run partner perks program</h2>
             <p className="text-lg text-[#6b6b6b]">Create perks, manage partnerships, track performance, and scale from one platform.</p>
           </div>
 
@@ -255,7 +192,7 @@ export default function Home() {
             ].map((item, i) => (
               <Card key={i} className="border-[#eeeeee] rounded-3xl p-2 smooth-transition hover:shadow-lg hover:shadow-black/5">
                 <CardContent className="pt-6">
-                  <h3 className="text-lg font-bold mb-3">{item.title}</h3>
+                  <h3 className="text-lg font-medium mb-3">{item.title}</h3>
                   <p className="text-sm text-[#6b6b6b]">{item.desc}</p>
                 </CardContent>
               </Card>
@@ -287,7 +224,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
             <div className="max-w-2xl">
-              <h2 className="text-3xl md:text-4xl font-bold mb-3 text-white">Grow partnerships without the heavy lifting</h2>
+              <h2 className="text-3xl md:text-4xl font-medium mb-3 text-white">Grow partnerships without the heavy lifting</h2>
               <p className="text-lg text-[#6b6b6b]">Find the right partners, exchange perks effortlessly, and start growing.</p>
             </div>
           </div>
@@ -316,7 +253,7 @@ export default function Home() {
                   <Badge className="absolute top-6 right-6 bg-white/10 text-white/60 border-none text-[9px] font-bold">Coming Soon</Badge>
                 )}
                 <item.icon className="w-8 h-8 text-accent mb-4" />
-                <h3 className="text-xl font-bold mb-3 text-white">{item.title}</h3>
+                <h3 className="text-xl font-medium mb-3 text-white">{item.title}</h3>
                 <p className="text-sm text-[#6b6b6b] leading-relaxed">{item.desc}</p>
               </div>
             ))}
@@ -329,7 +266,7 @@ export default function Home() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full ai-gradient opacity-5 blur-[100px] pointer-events-none" />
         <div className="max-w-7xl mx-auto relative z-10 text-left">
           <div className="max-w-3xl">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-left">Start acquiring new users through partnerships</h2>
+            <h2 className="text-4xl md:text-5xl font-medium mb-6 text-left">Start acquiring new users through partnerships</h2>
             <p className="text-lg text-[#6b6b6b] mb-10 max-w-xl text-left">
               Reach high-intent audiences through complementary products and turn partnerships into a scalable acquisition channel.
             </p>

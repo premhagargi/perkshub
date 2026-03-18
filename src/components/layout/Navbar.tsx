@@ -2,10 +2,45 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { useState, useEffect } from 'react';
+import { cn } from '@/lib/utils';
 
 export default function Navbar() {
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const controlNavbar = () => {
+      if (typeof window !== 'undefined') {
+        const currentScrollY = window.scrollY;
+        
+        // Hide navbar if scrolling down and scrolled more than 100px
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          setIsVisible(false);
+        } 
+        // Show navbar if scrolling up
+        else {
+          setIsVisible(true);
+        }
+        
+        setLastScrollY(currentScrollY);
+      }
+    };
+
+    window.addEventListener('scroll', controlNavbar);
+
+    return () => {
+      window.removeEventListener('scroll', controlNavbar);
+    };
+  }, [lastScrollY]);
+
   return (
-    <div className="fixed top-4 inset-x-0 z-50 flex justify-center px-4 pointer-events-none">
+    <div 
+      className={cn(
+        "fixed top-4 inset-x-0 z-50 flex justify-center px-4 pointer-events-none transition-transform duration-500 cubic-bezier(0.16, 1, 0.3, 1)",
+        isVisible ? "translate-y-0 opacity-100" : "-translate-y-32 opacity-0"
+      )}
+    >
       <nav className="w-full md:w-[85%] max-w-6xl bg-white/70 backdrop-blur-xl border border-[#eeeeee] rounded-[24px] shadow-2xl shadow-black/5 pointer-events-auto overflow-hidden">
         <div className="px-6 h-14 md:h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group shrink-0">

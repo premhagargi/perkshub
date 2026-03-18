@@ -25,32 +25,42 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="pt-24 pb-20 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
-          <Badge className="bg-[#f3f3f3] text-[#111111] hover:bg-[#f3f3f3] border-none px-4 py-1.5 mb-8 rounded-full text-xs font-bold tracking-widest uppercase">
-            Partner Perks Platform
-          </Badge>
-          <h1 className="text-6xl md:text-8xl font-bold max-w-5xl mb-8 leading-tight">
-            Get high-intent users by partnering with <span className="text-transparent bg-clip-text ai-gradient">complementary products</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-[#6b6b6b] max-w-3xl mb-12 font-normal leading-relaxed">
-            PerksHub helps you partner with complementary products and offer exclusive deals to their users to drive high-intent sign-ups.
-          </p>
-          
-          <div className="flex flex-col items-center gap-6 mb-16">
-            <div className="flex flex-col sm:flex-row gap-6 text-left">
+      <section className="relative pt-32 pb-40 md:pt-48 md:pb-56 px-6 overflow-hidden bg-white">
+        {/* Decorative Watermark Background */}
+        <div className="absolute -left-12 top-1/2 -translate-y-1/2 text-[22vw] font-black text-black/[0.02] select-none pointer-events-none uppercase tracking-tighter leading-none whitespace-nowrap z-0">
+          Partners
+        </div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="max-w-4xl text-left">
+            <Badge className="bg-[#f3f3f3] text-[#111111] hover:bg-[#f3f3f3] border-none px-4 py-1.5 mb-8 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase">
+              Partner Perks Platform
+            </Badge>
+            
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#111111] leading-[1.05] tracking-tight mb-8">
+              Acquire high-intent users through <span className="text-transparent bg-clip-text ai-gradient">complementary</span> products
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-[#6b6b6b] max-w-xl mb-10 font-normal leading-relaxed">
+              PerksHub helps you partner with the products your users already love, driving scalable growth through trusted network recommendations.
+            </p>
+
+            <div className="space-y-4 mb-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
               {[
-                "Get discovered by high-intent users",
-                "Convert them with exclusive deals",
-                "Grow through a network of partnerships"
+                "Get discovered by high-intent audiences",
+                "Convert users with tailored exclusive deals",
+                "Scale through an automated partner network"
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-2 font-medium text-[#111111]">
-                  <CheckCircle2 className="w-5 h-5 text-accent" />
+                <div key={i} className="flex items-center gap-3 text-lg font-medium text-[#111111]">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center">
+                    <CheckCircle2 className="w-4 h-4 text-accent" />
+                  </div>
                   <span>{item}</span>
                 </div>
               ))}
             </div>
-            <Button asChild className="pill-button bg-[#111111] text-white h-[56px] text-lg px-12 group">
+            
+            <Button asChild className="pill-button bg-[#111111] text-white h-[60px] text-lg px-10 group shadow-2xl shadow-black/10 hover:shadow-black/20 transition-all duration-300">
               <Link href="/discover">Get in touch <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /></Link>
             </Button>
           </div>

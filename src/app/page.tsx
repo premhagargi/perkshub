@@ -1,4 +1,6 @@
+
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { 
   ArrowRight, 
@@ -16,15 +18,28 @@ import {
 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function Home() {
+  const getPlaceholderById = (id: string) => PlaceHolderImages.find(img => img.id === id);
+
+  const perksData = [
+    { name: 'Pipedrive', members: '2,376', desc: 'Sales software to help you focus on the deals that matter.', perk: '20% off for 12 months', save: 'Save up to $2,376', logoId: 'brand-shopify' },
+    { name: 'Google Cloud (GCP)', members: '10,333', desc: 'Cloud services by Google.', perk: '$2,000 in credits for 1 year', save: 'Save up to $350,000', logoId: 'brand-gcp' },
+    { name: 'HubSpot', members: '2,678', desc: 'CRM, marketing, automation & customer service software suite.', perk: '90% off the Professional and Enterprise plans...', save: 'Save up to $17,000', logoId: 'brand-hubspot' },
+    { name: 'Intercom', members: '2,943', desc: 'Strengthen relationships with your customers with an online...', perk: '1 year free on the Advanced plan', save: 'Save up to $6,108', logoId: 'brand-shopify' },
+    { name: 'Shopify', members: '1,952', desc: 'Ecommerce platform for online stores and retail POS systems.', perk: '$1/month for first 3 months', save: 'Save up to $4,500', logoId: 'brand-shopify' },
+    { name: 'Airtable', members: '7,714', desc: 'Easily store and organize your data.', perk: '$1,000 in credits for 1 year', save: 'Save up to $1,000', logoId: 'brand-airtable' },
+    { name: 'Auth0', members: '1,331', desc: 'An easy-to-implement, adaptable authentication and authorization...', perk: '12 months free', save: 'Save up to $22,000', logoId: 'brand-hubspot' },
+    { name: 'ElevenLabs', members: '3,027', desc: 'Bring words to life with AI-powered voices.', perk: '12 months free (33 million characters...)', save: 'Save up to $4,000', logoId: 'brand-airtable' },
+  ];
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative pt-24 pb-32 md:pt-32 md:pb-40 px-6 overflow-hidden bg-white">
-        {/* Subtle decorative background hues */}
-        <div className="absolute -top-24 -right-24 w-[500px] h-[500px] ai-gradient opacity-[0.15] blur-[120px] rounded-full pointer-events-none" />
-        <div className="absolute top-1/2 -left-48 w-[400px] h-[400px] ai-gradient opacity-[0.1] blur-[100px] rounded-full pointer-events-none" />
+        <div className="absolute -top-24 -right-24 w-[500px] h-[500px] ai-gradient opacity-[0.25] blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 -left-48 w-[400px] h-[400px] ai-gradient opacity-[0.2] blur-[100px] rounded-full pointer-events-none" />
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="max-w-3xl text-left">
@@ -40,7 +55,7 @@ export default function Home() {
               Perkshub helps you partner with the products your users already love, driving scalable growth through trusted network recommendations.
             </p>
 
-            <div className="space-y-3 mb-10 animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <div className="space-y-3 mb-10">
               {[
                 "Get discovered by high-intent audiences",
                 "Convert users with tailored exclusive deals",
@@ -60,6 +75,50 @@ export default function Home() {
                 <Link href="/discover">Get started <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" /></Link>
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Perks Grid Section */}
+      <section className="pb-24 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {perksData.map((perk, i) => {
+              const placeholder = getPlaceholderById(perk.logoId);
+              return (
+                <Card key={i} className="border-[#eeeeee] shadow-none rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="relative w-12 h-12 flex-shrink-0 rounded-lg border border-[#eeeeee] overflow-hidden bg-gray-50 flex items-center justify-center">
+                        {placeholder && (
+                          <Image 
+                            src={placeholder.imageUrl} 
+                            alt={perk.name}
+                            width={40}
+                            height={40}
+                            className="object-contain"
+                            data-ai-hint={placeholder.imageHint}
+                          />
+                        )}
+                      </div>
+                      <div>
+                        <h3 className="text-sm font-bold text-[#111111]">{perk.name}</h3>
+                        <p className="text-[11px] text-[#999999]">Used by {perk.members} members</p>
+                      </div>
+                    </div>
+                    
+                    <p className="text-xs text-[#6b6b6b] line-clamp-2 mb-6 min-h-[32px]">
+                      {perk.desc}
+                    </p>
+                    
+                    <div className="space-y-0.5">
+                      <p className="text-sm font-bold text-green-600">{perk.perk}</p>
+                      <p className="text-[11px] text-[#999999]">{perk.save}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>

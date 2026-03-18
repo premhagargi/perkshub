@@ -30,6 +30,30 @@
       "description": "Notion Logo Placeholder",
       "imageUrl": "https://picsum.photos/seed/nt1/400/200",
       "imageHint": "saas logo"
+    },
+    {
+      "id": "brand-shopify",
+      "description": "Shopify Logo Mock",
+      "imageUrl": "https://picsum.photos/seed/shop1/100/100",
+      "imageHint": "shopify logo"
+    },
+    {
+      "id": "brand-hubspot",
+      "description": "HubSpot Logo Mock",
+      "imageUrl": "https://picsum.photos/seed/hub1/100/100",
+      "imageHint": "hubspot logo"
+    },
+    {
+      "id": "brand-gcp",
+      "description": "Google Cloud Logo Mock",
+      "imageUrl": "https://picsum.photos/seed/gcp1/100/100",
+      "imageHint": "google cloud"
+    },
+    {
+      "id": "brand-airtable",
+      "description": "Airtable Logo Mock",
+      "imageUrl": "https://picsum.photos/seed/air1/100/100",
+      "imageHint": "airtable logo"
     }
   ]
 }

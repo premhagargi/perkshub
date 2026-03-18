@@ -57,7 +57,7 @@
 }
 
 .pill-button {
-  @apply rounded-full px-7 py-3 font-medium transition-all duration-300 hover:scale-[1.02] active:scale-[0.98];
+  @apply rounded-full px-7 py-2 font-medium transition-all duration-300 hover:scale-[1.02] active:scale-[0.98];
 }
 
 .smooth-transition {

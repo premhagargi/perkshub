@@ -22,7 +22,7 @@ export default function Home() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative pt-24 pb-32 md:pt-32 md:pb-40 px-6 overflow-hidden bg-white">
-        {/* Subtle decorative background hues - Slightly darkened opacity */}
+        {/* Subtle decorative background hues */}
         <div className="absolute -top-24 -right-24 w-[500px] h-[500px] ai-gradient opacity-[0.12] blur-[120px] rounded-full pointer-events-none" />
         <div className="absolute top-1/2 -left-48 w-[400px] h-[400px] ai-gradient opacity-[0.08] blur-[100px] rounded-full pointer-events-none" />
         
@@ -149,7 +149,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6 flex flex-col flex-1">
-                  <span className="text-[10px] uppercase font-bold tracking-widest text-[#FF5A1F] mt-2">
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-accent mt-2">
                     {item.label}
                   </span>
                   <h3 className="text-lg font-medium text-gray-900 mt-1 leading-snug">
@@ -178,21 +178,21 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                label: "EXAMPLE",
-                title: "Perplexity",
-                desc: "Perplexity offers 1-year Pro access to subscribers Lenny's Newsletter, Airtel and more",
+                label: "CASE STUDY",
+                title: "Cross-Product Utility",
+                desc: "Strategic alliances between design tools and hosting platforms drive mutual adoption.",
                 icon: Zap
               },
               {
-                label: "CONVERSION",
-                title: "Incentivize users with exclusive perks",
-                desc: "Drive trials and conversions with tailored discounts, free credits, or exclusive access.",
+                label: "ENGAGEMENT",
+                title: "Boost LTV with partner value",
+                desc: "Users stay longer when they have a stack of integrated, discounted tools.",
                 icon: Gift
               },
               {
-                label: "GROWTH",
-                title: "Drive growth through partnerships",
-                desc: "Every new partnership becomes a steady, repeatable source of high-quality users.",
+                label: "NETWORK",
+                title: "The power of affinity",
+                desc: "Users are 4x more likely to convert from a brand they already trust.",
                 icon: Rocket
               }
             ].map((item, i) => (
@@ -205,7 +205,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6 flex flex-col flex-1">
-                  <span className="text-[10px] uppercase font-bold tracking-widest text-[#FF5A1F] mt-2">
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-accent mt-2">
                     {item.label}
                   </span>
                   <h3 className="text-lg font-medium text-gray-900 mt-1 leading-snug">
@@ -259,7 +259,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6 flex flex-col flex-1">
-                  <span className="text-[10px] uppercase font-bold tracking-widest text-[#FF5A1F] mt-2">
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-accent mt-2">
                     {item.label}
                   </span>
                   <h3 className="text-lg font-medium text-gray-900 mt-1 leading-snug">
@@ -295,42 +295,58 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AI Growth Section */}
-      <section className="py-20 px-6 bg-[#111111] text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-            <div className="max-w-2xl">
-              <h2 className="text-3xl md:text-4xl font-medium mb-3 text-white">Grow partnerships without the heavy lifting</h2>
-              <p className="text-lg text-[#6b6b6b]">Find the right partners, exchange perks effortlessly, and start growing.</p>
-            </div>
+      {/* AI Growth Section - Now styled to match other sections */}
+      <section className="py-20 px-6 bg-white border-t border-[#eeeeee]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-medium mb-4">Grow partnerships without the heavy lifting</h2>
+            <p className="text-lg text-[#6b6b6b] max-w-2xl mx-auto">Find the right partners, exchange perks effortlessly, and start growing with automated tools.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
+                label: "DIRECTORY",
                 title: "Partner Directory",
-                desc: "Discover and connect with products already looking for partnerships.",
-                comingSoon: true,
-                icon: Search
+                desc: "Discover and connect with products already looking for partnerships in our curated network.",
+                icon: Search,
+                comingSoon: true
               },
               {
+                label: "OUTREACH",
                 title: "Easy Partner Outreach",
                 desc: "Find partners with overlapping audiences and reach out with proposals faster with built-in AI.",
                 icon: MousePointerClick
               },
               {
+                label: "AUTOMATION",
                 title: "Two-Way Perks Exchange",
                 desc: "Onboard new partners in minutes and set up mutual perk exchange deals without friction.",
                 icon: RefreshCw
               }
             ].map((item, i) => (
-              <div key={i} className="p-6 rounded-3xl bg-white/5 border border-white/10 relative">
-                {item.comingSoon && (
-                  <Badge className="absolute top-6 right-6 bg-white/10 text-white/60 border-none text-[9px] font-bold">Coming Soon</Badge>
-                )}
-                <item.icon className="w-8 h-8 text-accent mb-4" />
-                <h3 className="text-xl font-medium mb-3 text-white">{item.title}</h3>
-                <p className="text-sm text-[#6b6b6b] leading-relaxed">{item.desc}</p>
+              <div 
+                key={i} 
+                className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden"
+              >
+                <div className="bg-[#EFEFF1] h-64 flex items-center justify-center relative">
+                  {item.comingSoon && (
+                    <Badge className="absolute top-4 right-4 bg-white/50 text-gray-500 border-none text-[9px] font-bold backdrop-blur-sm">Coming Soon</Badge>
+                  )}
+                  <item.icon className="w-20 h-20 text-gray-400 transform transition-transform group-hover:scale-110 duration-500" />
+                </div>
+
+                <div className="p-6 flex flex-col flex-1">
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-accent mt-2">
+                    {item.label}
+                  </span>
+                  <h3 className="text-lg font-medium text-gray-900 mt-1 leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-gray-500 mt-2 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

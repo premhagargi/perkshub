@@ -75,7 +75,7 @@ export default function Home() {
       <div className="max-w-6xl mx-auto border-x border-[#eeeeee]">
         {/* Showcase Image Section */}
         <section className="relative overflow-hidden border-b border-[#eeeeee] opacity-0 animate-blur-in delay-400 px-6 py-6 bg-white">
-          <div className="relative overflow-hidden bg-[#f9f9f9] border border-[#eeeeee] rounded-xl mx-auto max-w-5xl">
+          <div className="relative overflow-hidden mx-auto max-w-5xl">
             <Image 
               src="/assets/Frame.png" 
               alt="Partner Platform Showcase"

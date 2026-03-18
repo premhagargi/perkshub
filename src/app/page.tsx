@@ -104,13 +104,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Solution Section 1 - The Playbook */}
+      {/* Solution Section 1 - The Perks Strategy */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-medium mb-4">A proven playbook used by the best</h2>
+            <h2 className="text-3xl md:text-4xl font-medium mb-4">Acquire high-intent users through Partner Perks</h2>
             <p className="text-lg text-[#6b6b6b] max-w-2xl mx-auto">
-              Top SaaS and Creators already offer perks through partner ecosystems to reach high-intent users and drive adoption.
+              Join partner perks programs of complementary products - reach the right audience, offer exclusive deals that drive conversion, and build a scalable acquisition channel.
             </p>
           </div>
 
@@ -167,13 +167,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Solution Section 2 - The Perks Strategy */}
+      {/* Solution Section 2 - The Playbook */}
       <section className="py-16 px-6 bg-white border-t border-[#eeeeee]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-medium mb-4">Acquire high-intent users through Partner Perks</h2>
+            <h2 className="text-3xl md:text-4xl font-medium mb-4">A proven playbook used by the best</h2>
             <p className="text-lg text-[#6b6b6b] max-w-2xl mx-auto">
-              Join partner perks programs of complementary products - reach the right audience, offer exclusive deals that drive conversion, and build a scalable acquisition channel.
+              Top SaaS and Creators already offer perks through partner ecosystems to reach high-intent users and drive adoption.
             </p>
           </div>
 

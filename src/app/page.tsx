@@ -11,7 +11,6 @@ import {
   RefreshCw, 
   Zap,
   Star,
-  Users,
   Gift,
   Rocket
 } from 'lucide-react';
@@ -23,6 +22,10 @@ export default function Home() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative pt-24 pb-32 md:pt-32 md:pb-40 px-6 overflow-hidden bg-white">
+        {/* Subtle decorative background hues */}
+        <div className="absolute -top-24 -right-24 w-[500px] h-[500px] ai-gradient opacity-[0.07] blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 -left-48 w-[400px] h-[400px] ai-gradient opacity-[0.04] blur-[100px] rounded-full pointer-events-none" />
+        
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="max-w-3xl text-left">
             <Badge className="bg-[#f3f3f3] text-[#111111] hover:bg-[#f3f3f3] border-none px-4 py-1.5 mb-6 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase">
@@ -34,7 +37,7 @@ export default function Home() {
             </h1>
             
             <p className="text-lg md:text-xl text-[#6b6b6b] max-w-xl mb-8 font-normal leading-relaxed">
-              PerksHub helps you partner with the products your users already love, driving scalable growth through trusted network recommendations.
+              PartnerPath AI helps you partner with the products your users already love, driving scalable growth through trusted network recommendations.
             </p>
 
             <div className="space-y-3 mb-10 animate-in fade-in slide-in-from-bottom-4 duration-700">
@@ -52,9 +55,11 @@ export default function Home() {
               ))}
             </div>
             
-            <Button asChild className="pill-button bg-[#111111] text-white h-[56px] text-base px-10 group shadow-xl shadow-black/5 hover:shadow-black/10 transition-all duration-300">
-              <Link href="/discover">Get in touch <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" /></Link>
-            </Button>
+            <div className="flex justify-start">
+              <Button asChild className="pill-button bg-[#111111] text-white h-[56px] text-base px-10 group shadow-xl shadow-black/5 hover:shadow-black/10 transition-all duration-300">
+                <Link href="/discover">Get started <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" /></Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -104,7 +109,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Solution Section 1 - The Perks Strategy */}
+      {/* Solution Section 1 - Strategy */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -167,7 +172,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Solution Section 2 - The Playbook */}
+      {/* Solution Section 2 - Playbook */}
       <section className="py-16 px-6 bg-white border-t border-[#eeeeee]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">

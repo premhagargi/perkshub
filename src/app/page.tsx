@@ -10,7 +10,10 @@ import {
   Search, 
   RefreshCw, 
   Zap,
-  Star
+  Star,
+  Users,
+  Gift,
+  Rocket
 } from 'lucide-react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -111,9 +114,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Solution Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
+      {/* Solution Section - GitBook Inspired Feature Cards */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Acquire high-intent users through Partner Perks</h2>
             <p className="text-lg text-[#6b6b6b] max-w-2xl mx-auto">
@@ -121,30 +124,62 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-10">
+          <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                step: "1",
+                label: "DISCOVERY",
                 title: "Get discovered by relevant audience",
-                desc: "Join Perk Programs of complementary products and get found by relevant audience."
+                desc: "Join Perk Programs of complementary products and get found by relevant audience.",
+                cta: "Learn more",
+                icon: Users
               },
               {
-                step: "2",
+                label: "CONVERSION",
                 title: "Incentivize users with exclusive perks",
-                desc: "Drive trials and conversions with tailored discounts, free credits, or exclusive access."
+                desc: "Drive trials and conversions with tailored discounts, free credits, or exclusive access.",
+                cta: "See examples",
+                icon: Gift
               },
               {
-                step: "3",
+                label: "GROWTH",
                 title: "Drive growth through partnerships",
-                desc: "Every new partnership becomes a steady, repeatable source of high-quality users."
+                desc: "Every new partnership becomes a steady, repeatable source of high-quality users.",
+                cta: "Get started",
+                icon: Rocket,
+                featured: true
               }
             ].map((item, i) => (
-              <div key={i} className="flex flex-col items-center text-center group">
-                <div className="w-10 h-10 rounded-full ai-gradient flex items-center justify-center text-white font-bold text-lg mb-4 shadow-lg shadow-orange-500/10">
-                  {item.step}
+              <div 
+                key={i} 
+                className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-2xl p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1"
+              >
+                {item.featured && (
+                  <div className="absolute top-4 right-4 bg-[#FF5A1F] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider z-10">
+                    Featured
+                  </div>
+                )}
+                
+                <div className="bg-[#EFEFF1] rounded-xl h-44 flex items-center justify-center relative overflow-hidden">
+                  <item.icon className="w-16 h-16 text-gray-400 transform transition-transform group-hover:scale-110 group-hover:-translate-y-2 duration-500" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                <p className="text-base text-[#6b6b6b]">{item.desc}</p>
+
+                <div className="flex flex-col flex-1">
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-[#FF5A1F] mt-5">
+                    {item.label}
+                  </span>
+                  <h3 className="text-lg font-semibold text-gray-900 mt-1 leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-gray-500 mt-2 leading-relaxed">
+                    {item.desc}
+                  </p>
+                  
+                  <div className="mt-auto pt-6">
+                    <div className="bg-gray-100 rounded-full px-4 py-2 text-sm font-medium w-fit text-gray-700 transition-colors group-hover:bg-gray-200 flex items-center gap-1">
+                      {item.cta} <ArrowRight className="w-3.5 h-3.5" />
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>

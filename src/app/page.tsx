@@ -154,10 +154,10 @@ export default function Home() {
                 icon: ShieldCheck 
               }
             ].map((item, i) => (
-              <Card key={i} className="border-none shadow-none bg-[#f9f9f9] rounded-3xl p-2">
+              <Card key={i} className="border-none shadow-md shadow-black/5 bg-[#f9f9f9] rounded-3xl p-2 smooth-transition hover:shadow-lg hover:shadow-black/10">
                 <CardContent className="pt-6">
                   <item.icon className="w-7 h-7 text-accent mb-4" />
-                  <h3 className="text-lg font-bold mb-2">{item.title}</h3>
+                  <h3 className="text-lg font-medium mb-2">{item.title}</h3>
                   <p className="text-sm text-[#6b6b6b]">{item.desc}</p>
                 </CardContent>
               </Card>
@@ -344,7 +344,7 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-2xl bg-[#f9f9f9] flex items-center justify-center mb-6">
                   <item.icon className="w-6 h-6 text-[#111111]" />
                 </div>
-                <h4 className="text-lg font-bold mb-2">{item.title}</h4>
+                <h4 className="text-lg font-medium mb-2">{item.title}</h4>
                 <p className="text-sm text-[#6b6b6b] leading-relaxed">{item.desc}</p>
               </div>
             ))}

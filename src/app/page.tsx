@@ -334,14 +334,16 @@ export default function Home() {
       {/* Final CTA */}
       <section className="py-24 px-6 bg-white relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full ai-gradient opacity-5 blur-[100px] pointer-events-none" />
-        <div className="max-w-3xl mx-auto text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Start acquiring new users through partnerships</h2>
-          <p className="text-lg text-[#6b6b6b] mb-10 max-w-xl mx-auto">
-            Reach high-intent audiences through complementary products and turn partnerships into a scalable acquisition channel.
-          </p>
-          <Button asChild className="pill-button bg-[#111111] text-white h-[56px] px-10 text-lg group">
-            <Link href="/discover">Get in touch <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /></Link>
-          </Button>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="max-w-3xl text-left">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Start acquiring new users through partnerships</h2>
+            <p className="text-lg text-[#6b6b6b] mb-10 max-w-xl">
+              Reach high-intent audiences through complementary products and turn partnerships into a scalable acquisition channel.
+            </p>
+            <Button asChild className="pill-button bg-[#111111] text-white h-[56px] px-10 text-lg group">
+              <Link href="/discover">Get in touch <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /></Link>
+            </Button>
+          </div>
         </div>
       </section>
     </div>

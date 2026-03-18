@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import { LenisProvider } from '@/components/providers/LenisProvider';
 
 export const metadata: Metadata = {
   title: 'PartnerPath AI | Premium Partnership Discovery',
@@ -20,11 +21,15 @@ export default function RootLayout({
         <link href="https://api.fontshare.com/v2/css?f[]=general-sans@200,300,400,500,600,700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body selection:bg-accent/20">
-        <div className="relative min-h-screen overflow-hidden">
-          <Navbar />
-          <main className="relative z-10">{children}</main>
-          <Footer />
-        </div>
+        <LenisProvider>
+          <div className="relative min-h-screen flex flex-col">
+            <Navbar />
+            <main className="flex-grow pt-14 md:pt-16">
+              {children}
+            </main>
+            <Footer />
+          </div>
+        </LenisProvider>
       </body>
     </html>
   );

@@ -23,8 +23,8 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative pt-24 pb-32 md:pt-32 md:pb-40 px-6 overflow-hidden bg-white">
         {/* Subtle decorative background hues */}
-        <div className="absolute -top-24 -right-24 w-[500px] h-[500px] ai-gradient opacity-[0.12] blur-[120px] rounded-full pointer-events-none" />
-        <div className="absolute top-1/2 -left-48 w-[400px] h-[400px] ai-gradient opacity-[0.08] blur-[100px] rounded-full pointer-events-none" />
+        <div className="absolute -top-24 -right-24 w-[500px] h-[500px] ai-gradient opacity-[0.15] blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 -left-48 w-[400px] h-[400px] ai-gradient opacity-[0.1] blur-[100px] rounded-full pointer-events-none" />
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="max-w-3xl text-left">
@@ -32,7 +32,7 @@ export default function Home() {
               Partner Perks Platform
             </Badge>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium text-[#111111] leading-[1.1] tracking-tight mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium text-[#111111] leading-[1.1] tracking-tight mb-6">
               Get high-intent users by partnering with complementary products
             </h1>
             
@@ -295,7 +295,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AI Growth Section - Now styled to match other sections */}
+      {/* AI Growth Section */}
       <section className="py-20 px-6 bg-white border-t border-[#eeeeee]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -358,7 +358,7 @@ export default function Home() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full ai-gradient opacity-5 blur-[100px] pointer-events-none" />
         <div className="max-w-7xl mx-auto relative z-10 text-left">
           <div className="max-w-3xl">
-            <h2 className="text-4xl md:text-5xl font-medium mb-6 text-left">Start acquiring new users through partnerships</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium mb-6 text-left">Start acquiring new users through partnerships</h2>
             <p className="text-lg text-[#6b6b6b] mb-10 max-w-xl text-left">
               Reach high-intent audiences through complementary products and turn partnerships into a scalable acquisition channel.
             </p>

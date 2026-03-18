@@ -73,7 +73,7 @@ export default function Home() {
             </div>
             
             <div className="flex justify-start opacity-0 animate-blur-in delay-400">
-              <Button asChild className="pill-button bg-[#111111] text-white h-[52px] text-base px-14 group shadow-xl shadow-black/5 hover:shadow-black/10 transition-all duration-300">
+              <Button asChild className="pill-button bg-[#111111] text-white h-[48px] text-base px-14 group shadow-xl shadow-black/5 hover:shadow-black/10 transition-all duration-300">
                 <Link href="/discover">
                   Get started 
                   <svg className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -161,7 +161,7 @@ export default function Home() {
                   icon: ShieldCheck 
                 }
               ].map((item, i) => (
-                <Card key={i} className="border border-[#eeeeee] shadow-md shadow-black/5 bg-[#f9f9f9] rounded-xl p-6 smooth-transition hover:shadow-lg hover:shadow-black/10">
+                <Card key={i} className="border border-[#eeeeee] shadow-md shadow-black/5 bg-[#f9f9f9] rounded-xl p-8 smooth-transition hover:shadow-lg hover:shadow-black/10">
                   <CardContent className="p-0">
                     <div className="w-12 h-12 rounded-xl bg-white border border-[#eeeeee] flex items-center justify-center mb-6">
                       <item.icon className="w-6 h-6 text-accent" />

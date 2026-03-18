@@ -23,9 +23,9 @@ export default function Home() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative pt-12 pb-16 md:pt-16 md:pb-20 px-6 overflow-hidden bg-white">
-        {/* Decorative background hues */}
-        <div className="absolute -top-24 -right-24 w-[600px] h-[600px] ai-gradient opacity-[0.5] blur-[140px] rounded-full pointer-events-none z-20" />
-        <div className="absolute top-1/2 -left-48 w-[500px] h-[500px] ai-gradient opacity-[0.45] blur-[120px] rounded-full pointer-events-none z-20" />
+        {/* Decorative background hues - Reduced for mobile */}
+        <div className="absolute -top-12 -right-12 md:-top-24 md:-right-24 w-[300px] h-[300px] md:w-[600px] md:h-[600px] ai-gradient opacity-[0.25] md:opacity-[0.5] blur-[100px] md:blur-[140px] rounded-full pointer-events-none z-20" />
+        <div className="absolute top-3/4 -left-24 md:top-1/2 md:-left-48 w-[250px] h-[250px] md:w-[500px] md:h-[500px] ai-gradient opacity-[0.2] md:opacity-[0.45] blur-[80px] md:blur-[120px] rounded-full pointer-events-none z-20" />
         
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="max-w-3xl text-left mb-8">
@@ -189,7 +189,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Features Section - Replaced with Frame.png */}
+        {/* Features Section */}
         <section className="py-20 px-6 bg-white border-t border-[#eeeeee]">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">

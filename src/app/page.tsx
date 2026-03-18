@@ -22,28 +22,28 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative pt-20 pb-20 md:pt-24 md:pb-24 px-6 overflow-hidden bg-white">
+      <section className="relative pt-12 pb-16 md:pt-16 md:pb-20 px-6 overflow-hidden bg-white">
         {/* Decorative background hues */}
-        <div className="absolute -top-24 -right-24 w-[600px] h-[600px] ai-gradient opacity-[0.5] blur-[140px] rounded-full pointer-events-none z-0" />
+        <div className="absolute -top-24 -right-24 w-[600px] h-[600px] ai-gradient opacity-[0.5] blur-[140px] rounded-full pointer-events-none z-20" />
         <div className="absolute top-1/2 -left-48 w-[500px] h-[500px] ai-gradient opacity-[0.45] blur-[120px] rounded-full pointer-events-none z-20" />
         
         <div className="max-w-6xl mx-auto relative z-10">
-          <div className="max-w-3xl text-left mb-12">
+          <div className="max-w-3xl text-left mb-8">
             <div className="opacity-0 animate-blur-in">
-              <Badge className="bg-[#f3f3f3] text-[#111111] hover:bg-[#f3f3f3] border-none px-4 py-1.5 mb-4 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase">
+              <Badge className="bg-[#f3f3f3] text-[#111111] hover:bg-[#f3f3f3] border-none px-4 py-1.5 mb-2 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase">
                 Partner Perks Platform
               </Badge>
             </div>
             
-            <h1 className="text-3xl md:text-4xl lg:text-[44px] font-medium text-[#111111] leading-[1.1] tracking-tight mb-4 opacity-0 animate-blur-in delay-100">
+            <h1 className="text-3xl md:text-4xl lg:text-[44px] font-medium text-[#111111] leading-[1.05] tracking-tight mb-3 opacity-0 animate-blur-in delay-100">
               Get high-intent users by partnering with complementary products
             </h1>
             
-            <p className="text-lg md:text-xl text-[#6b6b6b] max-w-xl mb-6 font-normal leading-relaxed opacity-0 animate-blur-in delay-200">
+            <p className="text-lg md:text-xl text-[#6b6b6b] max-w-xl mb-4 font-normal leading-relaxed opacity-0 animate-blur-in delay-200">
               Perkshub helps you partner with the products your users already love, driving scalable growth through trusted network recommendations.
             </p>
 
-            <div className="space-y-1 mb-8 opacity-0 animate-blur-in delay-300">
+            <div className="space-y-1 mb-6 opacity-0 animate-blur-in delay-300">
               {[
                 "Get discovered by high-intent audiences",
                 "Convert users with tailored exclusive deals",
@@ -77,7 +77,7 @@ export default function Home() {
                 alt="Partner Platform Showcase"
                 width={1200}
                 height={675}
-                className="w-full h-auto object-cover border border-[#eeeeee]"
+                className="w-full h-auto object-cover"
                 priority
               />
           </div>
@@ -189,132 +189,22 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Solution Section 2 - Playbook */}
-        <section className="py-16 px-6 bg-white border-t border-[#eeeeee]">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-medium mb-4">A proven playbook used by the best</h2>
-              <p className="text-lg md:text-xl text-[#6b6b6b] max-w-2xl mx-auto">
-                Top SaaS and Creators already offer perks through partner ecosystems to reach high-intent users and drive adoption.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                {
-                  label: "CASE STUDY",
-                  title: "Cross-Product Utility",
-                  desc: "Strategic alliances between design tools and hosting platforms drive mutual adoption.",
-                  icon: Zap
-                },
-                {
-                  label: "ENGAGEMENT",
-                  title: "Boost LTV with partner value",
-                  desc: "Users stay longer when they have a stack of integrated, discounted tools.",
-                  icon: Gift
-                },
-                {
-                  label: "NETWORK",
-                  title: "The power of affinity",
-                  desc: "Users are 4x more likely to convert from a brand they already trust.",
-                  icon: Rocket
-                }
-              ].map((item, i) => (
-                <div 
-                  key={i} 
-                  className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden"
-                >
-                  <div className="bg-[#EFEFF1] h-64 flex items-center justify-center relative">
-                    <item.icon className="w-20 h-20 text-gray-400 transform transition-transform group-hover:scale-110 duration-500" />
-                  </div>
-
-                  <div className="p-6 flex flex-col flex-1">
-                    <span className="text-[10px] uppercase font-bold tracking-widest text-accent mt-2">
-                      {item.label}
-                    </span>
-                    <h3 className="text-lg font-medium text-gray-900 mt-1 leading-snug">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-gray-500 mt-2 leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
+        {/* Features Section - Replaced with Frame.png */}
         <section className="py-20 px-6 bg-white border-t border-[#eeeeee]">
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-medium mb-4">Everything you need to run partner perks program</h2>
-              <p className="text-lg md:text-xl text-[#6b6b6b]">Create perks, manage partnerships, track performance, and scale from one platform.</p>
+              <p className="text-lg md:text-xl text-[#6b6b6b] max-w-2xl mx-auto">Create perks, manage partnerships, track performance, and scale from one platform.</p>
             </div>
-
-            <div className="grid lg:grid-cols-3 gap-6 mb-16">
-              {[
-                {
-                  label: "CUSTOMIZATION",
-                  title: "Create tailored perks for partners and users",
-                  desc: "Create perks with discounts, credits, trials, and commissions customized for each partner.",
-                  icon: Gift
-                },
-                {
-                  label: "MANAGEMENT",
-                  title: "Manage Partner and Perks easily in one place",
-                  desc: "Manage partners, deals, access rules, and redemptions in one place without the complexity.",
-                  icon: RefreshCw
-                },
-                {
-                  label: "PLATFORM",
-                  title: "Create your own Partner Perks Program",
-                  desc: "Create a branded perks page to offer partner perks and add more value to your users.",
-                  icon: Rocket
-                }
-              ].map((item, i) => (
-                <div 
-                  key={i} 
-                  className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden"
-                >
-                  <div className="bg-[#EFEFF1] h-64 flex items-center justify-center relative">
-                    <item.icon className="w-20 h-20 text-gray-400 transform transition-transform group-hover:scale-110 duration-500" />
-                  </div>
-
-                  <div className="p-6 flex flex-col flex-1">
-                    <span className="text-[10px] uppercase font-bold tracking-widest text-accent mt-2">
-                      {item.label}
-                    </span>
-                    <h3 className="text-lg font-medium text-gray-900 mt-1 leading-snug">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-gray-500 mt-2 leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                { title: "Tiered Partner Perks", desc: "Offer different perks based on partner plans.", icon: Star },
-                { title: "Track Performance", desc: "Monitor views, unlocks, and conversions.", icon: TrendingUp },
-                { title: "Partner Discovery", desc: "Get discovered by partners through directory.", icon: Search },
-                { title: "Managed Payouts", desc: "Automate payouts & settlements.", icon: Zap, comingSoon: true }
-              ].map((item, i) => (
-                <div key={i} className="p-8 border border-[#eeeeee] rounded-xl relative bg-white shadow-md shadow-black/5 smooth-transition hover:border-accent/30 hover:shadow-xl hover:shadow-black/10">
-                  {item.comingSoon && (
-                    <Badge className="absolute -top-3 right-6 bg-accent/10 text-accent border-none text-[10px] font-bold px-3 py-1 rounded-full">Coming Soon</Badge>
-                  )}
-                  <div className="w-12 h-12 rounded-lg bg-[#f9f9f9] flex items-center justify-center mb-6">
-                    <item.icon className="w-6 h-6 text-[#111111]" />
-                  </div>
-                  <h4 className="text-lg font-medium mb-2">{item.title}</h4>
-                  <p className="text-sm text-[#6b6b6b] leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
+            
+            <div className="relative rounded-xl overflow-hidden border border-[#eeeeee]">
+              <Image 
+                src="/assets/Frame.png" 
+                alt="Partner Path Platform Features"
+                width={1200}
+                height={675}
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </section>

@@ -36,7 +36,7 @@ export default function Home() {
               Partner Perks Platform
             </Badge>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#111111] leading-[1.1] tracking-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#111111] leading-[1.1] tracking-tight mb-6">
               Acquire high-intent users through complementary products
             </h1>
             

@@ -36,7 +36,7 @@ export default function PerksPage() {
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Perk Program</h1>
           <p className="text-xl text-[#6b6b6b]">Design and manage the exclusive benefits you offer to your partner network.</p>
         </div>
-        <Button className="pill-button bg-accent text-white h-[46px]">
+        <Button className="pill-button bg-accent text-white h-[38px] px-6">
           <Share2 className="mr-2 h-4 w-4" /> Publish Program
         </Button>
       </div>
@@ -52,7 +52,7 @@ export default function PerksPage() {
               <div className="space-y-2">
                 <label className="text-sm font-semibold">Perk Type</label>
                 <Select value={newPerk.type} onValueChange={(v) => setNewPerk({...newPerk, type: v})}>
-                  <SelectTrigger className="rounded-xl h-12 border-[#eeeeee]">
+                  <SelectTrigger className="rounded-xl h-10 border-[#eeeeee]">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
@@ -67,7 +67,7 @@ export default function PerksPage() {
                 <label className="text-sm font-semibold">Offer Value</label>
                 <Input 
                   placeholder="e.g. 50% off for 6 months" 
-                  className="h-12 rounded-xl border-[#eeeeee]"
+                  className="h-10 rounded-xl border-[#eeeeee]"
                   value={newPerk.value}
                   onChange={(e) => setNewPerk({...newPerk, value: e.target.value})}
                 />
@@ -81,7 +81,7 @@ export default function PerksPage() {
                   onChange={(e) => setNewPerk({...newPerk, description: e.target.value})}
                 />
               </div>
-              <Button onClick={addPerk} className="w-full pill-button h-[46px] bg-[#111111] text-white">
+              <Button onClick={addPerk} className="w-full pill-button h-[38px] bg-[#111111] text-white">
                 <Plus className="mr-2 h-4 w-4" /> Add Perk
               </Button>
             </CardContent>

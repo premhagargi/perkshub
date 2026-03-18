@@ -63,7 +63,7 @@ export default function DiscoverPage() {
                   <label className="text-sm font-semibold text-[#111111]">Target Audience</label>
                   <Input 
                     placeholder="e.g. Independent realtors and brokers"
-                    className="h-12 rounded-xl focus:ring-accent border-[#eeeeee]"
+                    className="h-10 rounded-xl focus:ring-accent border-[#eeeeee]"
                     required
                     value={formData.targetAudience}
                     onChange={(e) => setFormData({...formData, targetAudience: e.target.value})}
@@ -73,7 +73,7 @@ export default function DiscoverPage() {
                   <label className="text-sm font-semibold text-[#111111]">Partnership Goals</label>
                   <Input 
                     placeholder="e.g. Co-marketing and user acquisition"
-                    className="h-12 rounded-xl focus:ring-accent border-[#eeeeee]"
+                    className="h-10 rounded-xl focus:ring-accent border-[#eeeeee]"
                     required
                     value={formData.partnershipGoals}
                     onChange={(e) => setFormData({...formData, partnershipGoals: e.target.value})}
@@ -82,7 +82,7 @@ export default function DiscoverPage() {
                 <Button 
                   type="submit" 
                   disabled={loading}
-                  className="w-full pill-button h-[46px] bg-[#111111] text-white"
+                  className="w-full pill-button h-[38px] bg-[#111111] text-white"
                 >
                   {loading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Search className="mr-2 h-4 w-4" />}
                   Find Partners
@@ -146,7 +146,7 @@ export default function DiscoverPage() {
                       <p className="text-sm text-[#6b6b6b] italic">"{partner.reasoning}"</p>
                     </div>
                     <div className="flex justify-end">
-                      <Button asChild variant="outline" className="pill-button border-[#eeeeee] hover:bg-[#111111] hover:text-white group h-[40px]">
+                      <Button asChild variant="outline" className="pill-button border-[#eeeeee] hover:bg-[#111111] hover:text-white group h-[36px]">
                         <a href={`/outreach?name=${encodeURIComponent(partner.name)}&desc=${encodeURIComponent(partner.description)}`}>
                           Draft Outreach <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </a>

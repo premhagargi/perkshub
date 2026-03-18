@@ -88,7 +88,7 @@ function OutreachContent() {
               <Button 
                 onClick={handleGenerate} 
                 disabled={loading}
-                className="w-full pill-button h-[46px] bg-[#111111] text-white"
+                className="w-full pill-button h-[38px] bg-[#111111] text-white"
               >
                 {loading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Send className="mr-2 h-4 w-4" />}
                 Generate Message

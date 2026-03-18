@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import Link from 'link';
 import { Button } from '@/components/ui/button';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
@@ -41,7 +41,7 @@ export default function Navbar() {
         isVisible ? "translate-y-0" : "-translate-y-full"
       )}
     >
-      <nav className="max-w-6xl mx-auto px-6 h-14 md:h-16 flex items-center justify-between">
+      <nav className="max-w-6xl mx-auto px-6 h-12 md:h-14 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group shrink-0">
           <div className="w-7 h-7 ai-gradient rounded-lg flex items-center justify-center text-white font-bold text-base">P</div>
           <span className="text-base font-bold tracking-tight text-[#111111] hidden sm:inline-block">Perkshub</span>
@@ -56,7 +56,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-3">
           <Link href="/login" className="text-sm font-medium text-[#6b6b6b] hover:text-[#111111] transition-colors px-2 hidden sm:block">Log in</Link>
-          <Button asChild className="pill-button bg-[#111111] text-white hover:bg-[#111111]/90 h-[32px] md:h-[36px] px-4 md:px-5 text-xs md:text-sm">
+          <Button asChild className="pill-button bg-[#111111] text-white hover:bg-[#111111]/90 h-[32px] px-4 text-xs md:text-sm">
             <Link href="/discover">Get Started</Link>
           </Button>
         </div>

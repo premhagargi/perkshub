@@ -23,8 +23,8 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative pt-24 pb-32 md:pt-32 md:pb-40 px-6 overflow-hidden bg-white">
         {/* Subtle decorative background hues - Slightly darkened opacity */}
-        <div className="absolute -top-24 -right-24 w-[500px] h-[500px] ai-gradient opacity-[0.08] blur-[120px] rounded-full pointer-events-none" />
-        <div className="absolute top-1/2 -left-48 w-[400px] h-[400px] ai-gradient opacity-[0.06] blur-[100px] rounded-full pointer-events-none" />
+        <div className="absolute -top-24 -right-24 w-[500px] h-[500px] ai-gradient opacity-[0.12] blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 -left-48 w-[400px] h-[400px] ai-gradient opacity-[0.08] blur-[100px] rounded-full pointer-events-none" />
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="max-w-3xl text-left">
@@ -223,33 +223,53 @@ export default function Home() {
 
       {/* Features Section */}
       <section className="py-20 px-6 bg-white border-t border-[#eeeeee]">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-medium mb-4">Everything you need to run partner perks program</h2>
             <p className="text-lg text-[#6b6b6b]">Create perks, manage partnerships, track performance, and scale from one platform.</p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-6 mb-10">
+          <div className="grid lg:grid-cols-3 gap-6 mb-12">
             {[
               {
+                label: "CUSTOMIZATION",
                 title: "Create tailored perks for partners and users",
-                desc: "Create perks with discounts, credits, trials, and commissions customized for each partner."
+                desc: "Create perks with discounts, credits, trials, and commissions customized for each partner.",
+                icon: Gift
               },
               {
+                label: "MANAGEMENT",
                 title: "Manage Partner and Perks easily in one place",
-                desc: "Manage partners, deals, access rules, and redemptions in one place without the complexity."
+                desc: "Manage partners, deals, access rules, and redemptions in one place without the complexity.",
+                icon: RefreshCw
               },
               {
+                label: "PLATFORM",
                 title: "Create your own Partner Perks Program",
-                desc: "Create a branded perks page to offer partner perks and add more value to your users."
+                desc: "Create a branded perks page to offer partner perks and add more value to your users.",
+                icon: Rocket
               }
             ].map((item, i) => (
-              <Card key={i} className="border-[#eeeeee] rounded-3xl p-2 smooth-transition hover:shadow-lg hover:shadow-black/5">
-                <CardContent className="pt-6">
-                  <h3 className="text-lg font-medium mb-3">{item.title}</h3>
-                  <p className="text-sm text-[#6b6b6b]">{item.desc}</p>
-                </CardContent>
-              </Card>
+              <div 
+                key={i} 
+                className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden"
+              >
+                <div className="bg-[#EFEFF1] h-64 flex items-center justify-center relative">
+                  <item.icon className="w-20 h-20 text-gray-400 transform transition-transform group-hover:scale-110 duration-500" />
+                </div>
+
+                <div className="p-6 flex flex-col flex-1">
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-[#FF5A1F] mt-2">
+                    {item.label}
+                  </span>
+                  <h3 className="text-lg font-semibold text-gray-900 mt-1 leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-gray-500 mt-2 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
             ))}
           </div>
 

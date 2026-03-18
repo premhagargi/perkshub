@@ -41,7 +41,7 @@ export default function Navbar() {
         isVisible ? "translate-y-0 opacity-100" : "-translate-y-32 opacity-0"
       )}
     >
-      <nav className="w-full md:w-[85%] max-w-6xl bg-white/70 backdrop-blur-xl border border-[#eeeeee] rounded-[24px] shadow-2xl shadow-black/5 pointer-events-auto overflow-hidden">
+      <nav className="w-full md:w-[85%] max-w-6xl bg-white/70 backdrop-blur-xl border border-[#eeeeee] rounded-2xl shadow-2xl shadow-black/5 pointer-events-auto overflow-hidden">
         <div className="px-6 h-14 md:h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group shrink-0">
             <div className="w-7 h-7 ai-gradient rounded-lg flex items-center justify-center text-white font-bold text-base">P</div>

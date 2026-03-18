@@ -24,9 +24,9 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative pt-24 pb-32 md:pt-32 md:pb-40 px-6 overflow-hidden bg-white">
         {/* Decorative Watermark Background */}
-        <div className="absolute -left-12 top-1/2 -translate-y-1/2 text-[20vw] font-black text-black/[0.02] select-none pointer-events-none uppercase tracking-tighter leading-none whitespace-nowrap z-0">
+        {/* <div className="absolute -left-12 top-1/2 -translate-y-1/2 text-[20vw] font-black text-black/[0.02] select-none pointer-events-none uppercase tracking-tighter leading-none whitespace-nowrap z-0">
           Partners
-        </div>
+        </div> */}
 
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="max-w-3xl text-left">

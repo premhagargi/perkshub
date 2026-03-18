@@ -23,18 +23,13 @@ export default function Home() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative pt-24 pb-32 md:pt-32 md:pb-40 px-6 overflow-hidden bg-white">
-        {/* Decorative Watermark Background */}
-        {/* <div className="absolute -left-12 top-1/2 -translate-y-1/2 text-[20vw] font-black text-black/[0.02] select-none pointer-events-none uppercase tracking-tighter leading-none whitespace-nowrap z-0">
-          Partners
-        </div> */}
-
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="max-w-3xl text-left">
             <Badge className="bg-[#f3f3f3] text-[#111111] hover:bg-[#f3f3f3] border-none px-4 py-1.5 mb-6 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase">
               Partner Perks Platform
             </Badge>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#111111] leading-[1.1] tracking-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium text-[#111111] leading-[1.1] tracking-tight mb-6">
               Get high-intent users by partnering with complementary products
             </h1>
             
@@ -109,7 +104,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Solution Section - GitBook Inspired Feature Cards */}
+      {/* Solution Section 1 */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -122,10 +117,10 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                label: "DISCOVERY",
-                title: "Get discovered by relevant audience",
-                desc: "Join Perk Programs of complementary products and get found by relevant audience.",
-                icon: Users
+                label: "EXAMPLE",
+                title: "Perplexity",
+                desc: "Perplexity offers 1-year Pro access to subscribers Lenny's Newsletter, Airtel and more",
+                icon: Zap
               },
               {
                 label: "CONVERSION",
@@ -172,7 +167,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Repeated Section - Examples of proven playbooks */}
+      {/* Solution Section 2 - Repeated Section */}
       <section className="py-16 px-6 bg-white border-t border-[#eeeeee]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -186,15 +181,15 @@ export default function Home() {
             {[
               {
                 label: "EXAMPLE",
-                title: "Perplexity",
-                desc: "Perplexity offers 1-year Pro access to subscribers Lenny's Newsletter, Airtel and more",
-                icon: Zap
-              },
-              {
-                label: "EXAMPLE",
                 title: "Notion",
                 desc: "Notion offers exclusive credits and perks to communities, accelerators, and products.",
                 icon: Gift
+              },
+              {
+                label: "EXAMPLE",
+                title: "Perplexity",
+                desc: "Perplexity offers 1-year Pro access to subscribers Lenny's Newsletter, Airtel and more",
+                icon: Zap
               },
               {
                 label: "GROWTH",
@@ -236,7 +231,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 bg-white border-t border-[#eeeeee]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Everything you need to run partner perks program</h2>
@@ -334,13 +329,15 @@ export default function Home() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full ai-gradient opacity-5 blur-[100px] pointer-events-none" />
         <div className="max-w-7xl mx-auto relative z-10 text-left">
           <div className="max-w-3xl">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Start acquiring new users through partnerships</h2>
-            <p className="text-lg text-[#6b6b6b] mb-10 max-w-xl">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-left">Start acquiring new users through partnerships</h2>
+            <p className="text-lg text-[#6b6b6b] mb-10 max-w-xl text-left">
               Reach high-intent audiences through complementary products and turn partnerships into a scalable acquisition channel.
             </p>
-            <Button asChild className="pill-button bg-[#111111] text-white h-[56px] px-10 text-lg group">
-              <Link href="/discover">Get in touch <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /></Link>
-            </Button>
+            <div className="flex justify-start">
+              <Button asChild className="pill-button bg-[#111111] text-white h-[56px] px-10 text-lg group">
+                <Link href="/discover">Get in touch <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /></Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

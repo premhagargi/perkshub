@@ -71,15 +71,17 @@ export default function Home() {
       {/* Main Content Wrapper with Side Borders */}
       <div className="max-w-6xl mx-auto border-x border-[#eeeeee]">
         {/* Showcase Image Section */}
-        <section className="relative overflow-hidden border-b border-[#eeeeee] opacity-0 animate-blur-in delay-400">
-          <Image 
-            src="/assets/Frame.png" 
-            alt="Partner Platform Showcase"
-            width={1200}
-            height={675}
-            className="w-full h-auto object-cover"
-            priority
-          />
+        <section className="relative overflow-hidden border-b border-[#eeeeee] opacity-0 animate-blur-in delay-400 p-5">
+          <div className="relative rounded-xl overflow-hidden border border-[#eeeeee] bg-[#f9f9f9]">
+            <Image 
+              src="/assets/Frame.png" 
+              alt="Partner Platform Showcase"
+              width={1200}
+              height={675}
+              className="w-full h-auto object-cover"
+              priority
+            />
+          </div>
         </section>
 
         {/* Problem Section */}
@@ -193,7 +195,7 @@ export default function Home() {
               <p className="text-lg md:text-xl text-[#6b6b6b] max-w-2xl mx-auto">Create perks, manage partnerships, track performance, and scale from one platform.</p>
             </div>
             
-            <div className="relative overflow-hidden border border-[#eeeeee]">
+            <div className="relative overflow-hidden border border-[#eeeeee] rounded-xl">
               <Image 
                 src="/assets/Frame.png" 
                 alt="Partner Path Platform Features"

@@ -346,7 +346,7 @@ export default function Home() {
                 { title: "Partner Discovery", desc: "Get discovered by partners through directory.", icon: Search },
                 { title: "Managed Payouts", desc: "Automate payouts & settlements.", icon: Zap, comingSoon: true }
               ].map((item, i) => (
-                <div key={i} className="p-8 border border-[#eeeeee] rounded-xl relative bg-white smooth-transition hover:border-accent/30 hover:shadow-xl hover:shadow-black/5">
+                <div key={i} className="p-8 border border-[#eeeeee] rounded-xl relative bg-white shadow-md shadow-black/5 smooth-transition hover:border-accent/30 hover:shadow-xl hover:shadow-black/10">
                   {item.comingSoon && (
                     <Badge className="absolute -top-3 right-6 bg-accent/10 text-accent border-none text-[10px] font-bold px-3 py-1 rounded-full">Coming Soon</Badge>
                   )}

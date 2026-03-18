@@ -13,7 +13,10 @@ import {
   Zap,
   Gift,
   Rocket,
-  ArrowRight
+  ArrowRight,
+  BarChart3,
+  Layers,
+  Shield
 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
@@ -71,8 +74,8 @@ export default function Home() {
       {/* Main Content Wrapper with Side Borders */}
       <div className="max-w-6xl mx-auto border-x border-[#eeeeee]">
         {/* Showcase Image Section */}
-        <section className="relative overflow-hidden border-b border-[#eeeeee] opacity-0 animate-blur-in delay-400 p-5">
-          <div className="relative rounded-xl overflow-hidden border border-[#eeeeee] bg-[#f9f9f9]">
+        <section className="relative overflow-hidden border-b border-[#eeeeee] opacity-0 animate-blur-in delay-400 p-5 md:p-8">
+          <div className="relative overflow-hidden bg-[#f9f9f9]">
             <Image 
               src="/assets/Frame.png" 
               alt="Partner Platform Showcase"
@@ -187,22 +190,56 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* Features Section - Now with 3 cards instead of image */}
         <section className="py-20 px-6 bg-white border-t border-[#eeeeee]">
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
+            <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-medium mb-4">Everything you need to run partner perks program</h2>
               <p className="text-lg md:text-xl text-[#6b6b6b] max-w-2xl mx-auto">Create perks, manage partnerships, track performance, and scale from one platform.</p>
             </div>
             
-            <div className="relative overflow-hidden border border-[#eeeeee] rounded-xl">
-              <Image 
-                src="/assets/Frame.png" 
-                alt="Partner Path Platform Features"
-                width={1200}
-                height={675}
-                className="w-full h-auto"
-              />
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  label: "ANALYTICS",
+                  title: "Deep Performance Insights",
+                  desc: "Track every conversion, view, and redemption across your entire partner ecosystem in real-time.",
+                  icon: BarChart3
+                },
+                {
+                  label: "MANAGEMENT",
+                  title: "Seamless Program Control",
+                  desc: "Design complex perk structures and manage multi-partner relationships with ease.",
+                  icon: Layers
+                },
+                {
+                  label: "SECURITY",
+                  title: "Fraud & Access Protection",
+                  desc: "Secure distribution channels ensure perks reach only high-intent, verified users.",
+                  icon: Shield
+                }
+              ].map((item, i) => (
+                <div 
+                  key={i} 
+                  className="relative group flex flex-col bg-[#F7F7F8] border border-gray-100 rounded-xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden"
+                >
+                  <div className="bg-[#EFEFF1] h-64 flex items-center justify-center relative">
+                    <item.icon className="w-20 h-20 text-gray-400 transform transition-transform group-hover:scale-110 duration-500" />
+                  </div>
+
+                  <div className="p-6 flex flex-col flex-1">
+                    <span className="text-[10px] uppercase font-bold tracking-widest text-accent mt-2">
+                      {item.label}
+                    </span>
+                    <h3 className="text-lg font-medium text-gray-900 mt-1 leading-snug">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-gray-500 mt-2 leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>

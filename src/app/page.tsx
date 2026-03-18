@@ -37,7 +37,7 @@ export default function Home() {
             </Badge>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#111111] leading-[1.1] tracking-tight mb-6">
-              Acquire high-intent users through complementary products
+              Get high-intent users by partnering with complementary products
             </h1>
             
             <p className="text-lg md:text-xl text-[#6b6b6b] max-w-xl mb-8 font-normal leading-relaxed">

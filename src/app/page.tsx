@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -38,24 +37,27 @@ export default function Home() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative pt-24 pb-24 md:pt-32 md:pb-32 px-6 overflow-hidden bg-white">
-        <div className="absolute -top-24 -right-24 w-[600px] h-[600px] ai-gradient opacity-[0.3] blur-[140px] rounded-full pointer-events-none" />
-        <div className="absolute top-1/2 -left-48 w-[500px] h-[500px] ai-gradient opacity-[0.25] blur-[120px] rounded-full pointer-events-none" />
+        {/* Decorative background hues */}
+        <div className="absolute -top-24 -right-24 w-[600px] h-[600px] ai-gradient opacity-[0.4] blur-[140px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 -left-48 w-[500px] h-[500px] ai-gradient opacity-[0.35] blur-[120px] rounded-full pointer-events-none" />
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="max-w-3xl text-left mb-20">
-            <Badge className="bg-[#f3f3f3] text-[#111111] hover:bg-[#f3f3f3] border-none px-4 py-1.5 mb-6 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase">
-              Partner Perks Platform
-            </Badge>
+            <div className="opacity-0 animate-blur-in">
+              <Badge className="bg-[#f3f3f3] text-[#111111] hover:bg-[#f3f3f3] border-none px-4 py-1.5 mb-6 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase">
+                Partner Perks Platform
+              </Badge>
+            </div>
             
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium text-[#111111] leading-[1.1] tracking-tight mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium text-[#111111] leading-[1.1] tracking-tight mb-6 opacity-0 animate-blur-in delay-100">
               Get high-intent users by partnering with complementary products
             </h1>
             
-            <p className="text-lg md:text-xl text-[#6b6b6b] max-w-xl mb-8 font-normal leading-relaxed">
+            <p className="text-lg md:text-xl text-[#6b6b6b] max-w-xl mb-8 font-normal leading-relaxed opacity-0 animate-blur-in delay-200">
               Perkshub helps you partner with the products your users already love, driving scalable growth through trusted network recommendations.
             </p>
 
-            <div className="space-y-3 mb-10">
+            <div className="space-y-3 mb-10 opacity-0 animate-blur-in delay-300">
               {[
                 "Get discovered by high-intent audiences",
                 "Convert users with tailored exclusive deals",
@@ -70,15 +72,15 @@ export default function Home() {
               ))}
             </div>
             
-            <div className="flex justify-start">
+            <div className="flex justify-start opacity-0 animate-blur-in delay-400">
               <Button asChild className="pill-button bg-[#111111] text-white h-[56px] text-base px-10 group shadow-xl shadow-black/5 hover:shadow-black/10 transition-all duration-300">
                 <Link href="/discover">Get started <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" /></Link>
               </Button>
             </div>
           </div>
 
-          {/* Perks Grid - Integrated in Hero */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {/* Featured Perks Grid - Integrated in Hero */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 opacity-0 animate-blur-in delay-400">
             {perksData.map((perk, i) => {
               const placeholder = getPlaceholderById(perk.logoId);
               return (

@@ -15,8 +15,6 @@ import {
   Gift,
   Rocket
 } from 'lucide-react';
-import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -115,7 +113,7 @@ export default function Home() {
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">A proven playbook used by the best</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Acquire high-intent users through Partner Perks</h2>
             <p className="text-lg text-[#6b6b6b] max-w-2xl mx-auto">
               Top SaaS and Creators already offer perks through partner ecosystems to reach high-intent users and drive adoption.
             </p>

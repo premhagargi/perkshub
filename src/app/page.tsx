@@ -10,7 +10,6 @@ import {
   Search, 
   RefreshCw, 
   Zap,
-  Star,
   Gift,
   Rocket,
   ArrowRight
@@ -23,9 +22,9 @@ export default function Home() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative pt-12 pb-16 md:pt-16 md:pb-20 px-6 overflow-hidden bg-white">
-        {/* Decorative background hues - Reduced for mobile */}
+        {/* Decorative background hues - Layered over image on desktop, reduced on mobile */}
         <div className="absolute -top-12 -right-12 md:-top-24 md:-right-24 w-[300px] h-[300px] md:w-[600px] md:h-[600px] ai-gradient opacity-[0.25] md:opacity-[0.5] blur-[100px] md:blur-[140px] rounded-full pointer-events-none z-20" />
-        <div className="absolute top-3/4 -left-24 md:top-1/2 md:-left-48 w-[250px] h-[250px] md:w-[500px] md:h-[500px] ai-gradient opacity-[0.2] md:opacity-[0.45] blur-[80px] md:blur-[120px] rounded-full pointer-events-none z-20" />
+        <div className="absolute top-3/4 -left-24 md:top-1/2 md:-left-48 w-[250px] h-[250px] md:w-[500px] md:h-[500px] ai-gradient opacity-[0.2] md:opacity-[0.45] blur-[80px] md:blur-[120px] rounded-full pointer-events-none z-10" />
         
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="max-w-3xl text-left mb-8">
@@ -49,7 +48,7 @@ export default function Home() {
                 "Convert users with tailored exclusive deals",
                 "Scale through an automated partner network"
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 text-base font-medium text-[#111111]">
+                <div key={i} className="flex items-center gap-3 text-base font-medium text-[#6b6b6b]">
                   <div className="flex-shrink-0 w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center">
                     <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
                   </div>
@@ -70,8 +69,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Featured Showcase Image */}
-          <div className="relative z-10 opacity-0 animate-blur-in delay-400">
+          {/* Featured Showcase Image - No rounded corners or shadow as requested */}
+          <div className="relative z-0 opacity-0 animate-blur-in delay-400">
              <Image 
                 src="/assets/Frame.png" 
                 alt="Partner Platform Showcase"
@@ -197,7 +196,7 @@ export default function Home() {
               <p className="text-lg md:text-xl text-[#6b6b6b] max-w-2xl mx-auto">Create perks, manage partnerships, track performance, and scale from one platform.</p>
             </div>
             
-            <div className="relative rounded-xl overflow-hidden border border-[#eeeeee]">
+            <div className="relative overflow-hidden border border-[#eeeeee]">
               <Image 
                 src="/assets/Frame.png" 
                 alt="Partner Path Platform Features"

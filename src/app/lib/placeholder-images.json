@@ -1,0 +1,22 @@
+{
+  "placeholderImages": [
+    {
+      "id": "partner-logo-1",
+      "description": "Abstract Tech Logo",
+      "imageUrl": "https://picsum.photos/seed/tech1/200/200",
+      "imageHint": "tech logo"
+    },
+    {
+      "id": "partner-logo-2",
+      "description": "SaaS Platform Logo",
+      "imageUrl": "https://picsum.photos/seed/saas2/200/200",
+      "imageHint": "saas logo"
+    },
+    {
+      "id": "hero-dashboard",
+      "description": "Analytics Dashboard Preview",
+      "imageUrl": "https://picsum.photos/seed/dash1/1200/800",
+      "imageHint": "dashboard chart"
+    }
+  ]
+}

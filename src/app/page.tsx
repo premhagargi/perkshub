@@ -41,7 +41,7 @@ export default function Home() {
         <div className="absolute -top-24 -right-24 w-[600px] h-[600px] ai-gradient opacity-[0.4] blur-[140px] rounded-full pointer-events-none" />
         <div className="absolute top-1/2 -left-48 w-[500px] h-[500px] ai-gradient opacity-[0.35] blur-[120px] rounded-full pointer-events-none" />
         
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="max-w-3xl text-left mb-20">
             <div className="opacity-0 animate-blur-in">
               <Badge className="bg-[#f3f3f3] text-[#111111] hover:bg-[#f3f3f3] border-none px-4 py-1.5 mb-6 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase">
@@ -123,7 +123,7 @@ export default function Home() {
 
       {/* Problem Section */}
       <section className="py-20 px-6 bg-white border-y border-[#eeeeee]">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-medium mb-4">Traditional Growth Playbooks are breaking down</h2>
             <p className="text-lg text-[#6b6b6b] max-w-2xl mx-auto">
@@ -413,7 +413,7 @@ export default function Home() {
       {/* Final CTA */}
       <section className="py-24 px-6 bg-white relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full ai-gradient opacity-5 blur-[100px] pointer-events-none" />
-        <div className="max-w-7xl mx-auto relative z-10 text-left">
+        <div className="max-w-6xl mx-auto relative z-10 text-left">
           <div className="max-w-3xl">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium mb-6 text-left">Start acquiring new users through partnerships</h2>
             <p className="text-lg text-[#6b6b6b] mb-10 max-w-xl text-left">

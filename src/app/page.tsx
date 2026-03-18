@@ -229,7 +229,7 @@ export default function Home() {
             <p className="text-lg text-[#6b6b6b]">Create perks, manage partnerships, track performance, and scale from one platform.</p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-6 mb-12">
+          <div className="grid lg:grid-cols-3 gap-6 mb-16">
             {[
               {
                 label: "CUSTOMIZATION",
@@ -273,20 +273,22 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { title: "Tiered Partner Perks", desc: "Offer different perks based on partner plans.", icon: Star },
               { title: "Track Performance", desc: "Monitor views, unlocks, and conversions.", icon: TrendingUp },
               { title: "Partner Discovery", desc: "Get discovered by partners through directory.", icon: Search },
               { title: "Managed Payouts", desc: "Automate payouts & settlements.", icon: Zap, comingSoon: true }
             ].map((item, i) => (
-              <div key={i} className="p-5 border border-[#eeeeee] rounded-2xl relative">
+              <div key={i} className="p-8 border border-[#eeeeee] rounded-[2rem] relative bg-white smooth-transition hover:border-accent/30 hover:shadow-xl hover:shadow-black/5">
                 {item.comingSoon && (
-                  <Badge className="absolute -top-2 right-4 bg-accent/10 text-accent border-none text-[9px] font-bold">Coming Soon</Badge>
+                  <Badge className="absolute -top-3 right-6 bg-accent/10 text-accent border-none text-[10px] font-bold px-3 py-1 rounded-full">Coming Soon</Badge>
                 )}
-                <item.icon className="w-5 h-5 text-[#111111] mb-3" />
-                <h4 className="text-sm font-bold mb-1">{item.title}</h4>
-                <p className="text-xs text-[#6b6b6b]">{item.desc}</p>
+                <div className="w-12 h-12 rounded-2xl bg-[#f9f9f9] flex items-center justify-center mb-6">
+                  <item.icon className="w-6 h-6 text-[#111111]" />
+                </div>
+                <h4 className="text-lg font-bold mb-2">{item.title}</h4>
+                <p className="text-sm text-[#6b6b6b] leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
